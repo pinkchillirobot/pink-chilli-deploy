@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Suisse Int\'l Mono';
+    src: url('SuisseIntlMono.woff2') format('woff2'),
+        url('SuisseIntlMono.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
