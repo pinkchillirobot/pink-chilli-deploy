@@ -1,4 +1,3 @@
-"use client";
 import { LandingModule } from "@/components/LandingModule";
 import { Events } from "@/components/Events";
 import { SpecialHr } from "@/components/SpecialHr";

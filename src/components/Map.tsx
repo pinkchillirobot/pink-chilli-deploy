@@ -361,14 +361,12 @@ export const Map = () => {
             &nbsp;
           </div>
           <div
-            className={`fixed top-0 right-0 w-full h-full overflow-hidden max-w-[40rem] z-${
-              showPlace !== undefined ? 30 : 0
-            }`}
+            className={`fixed top-0 right-0 w-full h-full overflow-hidden max-w-[40rem]`}
+            style={{ zIndex: showPlace === undefined ? 0 : 30 }}
           >
             <div
-              className={`absolute w-full h-full bg-white/90 border-l border-chilli-grey transition-all transition-500 ${
-                showPlace !== undefined ? "left-0" : "left-[100%]"
-              } top-0`}
+              className={`absolute w-full h-full bg-white/90 border-l border-chilli-grey transition-all transition-500 top-0`}
+              style={{ left: showPlace === undefined ? "100%" : 0 }}
             >
               <button
                 className="top-4 right-4 absolute p-1"
