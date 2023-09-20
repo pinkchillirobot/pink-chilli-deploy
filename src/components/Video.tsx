@@ -5,7 +5,7 @@ export const Video = () => {
       className="relative w-full py-2 border-chilli-grey border-x px-4"
     >
       <iframe
-        src="https://www.youtube.com/embed/HO6cbtdmkIc?si=vxEyMSeh37rMXGGL"
+        src="https://www.youtube.com/embed/_hYIWAxNTC4"
         className="w-full aspect-video"
         title="Video"
         frameBorder="0"
