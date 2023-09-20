@@ -10,13 +10,23 @@ mapboxgl.accessToken = process.env.NEXT_PUBLIC_MAPBOX_TOKEN || "";
 export const Map = () => {
   const map = useRef<TMap>();
   const mapContainer = useRef<HTMLDivElement>(null);
-  const [lng, setLng] = useState(103.736863);
-  const [lat, setLat] = useState(1.343736);
-  const [zoom, setZoom] = useState(14.5);
+  const [lng, setLng] = useState(103.7344);
+  const [lat, setLat] = useState(1.3443);
+  const [zoom, setZoom] = useState(15.2);
   const [showPlace, setShowPlace] = useState<number>();
 
   useEffect(() => {
     if (map.current) return; // initialize map only once
+
+    let targetZoom = 15.2;
+    if (mapContainer.current?.offsetWidth) {
+      targetZoom -=
+        2 -
+        (2 * Math.max(300, Math.min(1000, mapContainer.current.offsetWidth))) /
+          700;
+      setZoom(() => targetZoom);
+    }
+
     map.current = new mapboxgl.Map({
       container: "map-container",
       style: process.env.NEXT_PUBLIC_MAPBOX_STYLE_URL,
@@ -25,7 +35,7 @@ export const Map = () => {
         [103.72249232195622, 1.3355558424240996],
         [103.74543442130016, 1.3529306311433231],
       ],
-      zoom: zoom,
+      zoom: targetZoom,
     });
 
     map.current.on("load", () => {
@@ -248,7 +258,7 @@ export const Map = () => {
         },
         paint: {
           "line-color": "#eba7ab",
-          "line-width": 8,
+          "line-width": ["interpolate", ["linear"], ["zoom"], 14, 3, 15, 8],
         },
       });
 
@@ -260,8 +270,10 @@ export const Map = () => {
           visibility: "visible",
         },
         paint: {
-          "circle-color": "#eba7ab",
-          "circle-radius": ["interpolate", ["linear"], ["zoom"], 14, 0, 15, 15],
+          "circle-color": "#ffffff",
+          "circle-stroke-color": "#eba7ab",
+          "circle-stroke-width": 1,
+          "circle-radius": ["interpolate", ["linear"], ["zoom"], 14, 5, 15, 15],
         },
       });
 
@@ -272,9 +284,12 @@ export const Map = () => {
         layout: {
           visibility: "visible",
           "text-field": "{label}",
-          "text-size": ["interpolate", ["linear"], ["zoom"], 14, 0, 15, 15],
+          "text-size": ["interpolate", ["linear"], ["zoom"], 14, 5, 15, 15],
+          "icon-allow-overlap": true,
         },
-        paint: {},
+        paint: {
+          "text-color": "#000000",
+        },
       });
     });
 
@@ -339,7 +354,7 @@ export const Map = () => {
   return (
     <>
       <div className="py-2 px-4 border-chilli-grey border-x">
-        <div className="aspect-[15/8] font-mono text-xs">
+        <div className="aspect-[4/3] md:aspect-[15/8] font-mono text-xs">
           <div
             ref={mapContainer}
             id="map-container"
