@@ -46,4 +46,5 @@ body {
   position: absolute;
   bottom: 1rem;
   left: 1rem;
+  @apply text-[10px] md:text-xs absolute bottom-1 left-1;
 }

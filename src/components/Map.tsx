@@ -286,6 +286,7 @@ export const Map = () => {
           "text-field": "{label}",
           "text-size": ["interpolate", ["linear"], ["zoom"], 14, 5, 15, 15],
           "icon-allow-overlap": true,
+          "text-allow-overlap": true,
         },
         paint: {
           "text-color": "#000000",
@@ -353,7 +354,10 @@ export const Map = () => {
 
   return (
     <>
-      <div className="py-2 px-4 border-chilli-grey border-x">
+      <div
+        className="py-2 px-4 border-chilli-grey scroll-my-16 border-x"
+        id="map"
+      >
         <div className="aspect-[4/3] md:aspect-[15/8] font-mono text-xs">
           <div
             ref={mapContainer}

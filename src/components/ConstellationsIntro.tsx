@@ -1,10 +1,14 @@
+"use client";
+
+import { SpecialHr } from "./SpecialHr";
+
 export const ConstellationsIntro = () => {
   return (
     <section
       id="constellations"
       className="relative w-full py-2 border-chilli-grey border-x px-4 scroll-my-16"
     >
-      <div className="grid grid-cols-[1fr_1fr] md:grid-cols-[1fr_1px_3fr] lg:grid-cols-[1fr_1px_2fr] gap-4">
+      <div className="grid grid-cols-[1fr_1px_1fr] md:grid-cols-[1fr_1px_3fr] lg:grid-cols-[1fr_1px_2fr] gap-4">
         <div className="[&>p]:indent-[2em] [&_p:nth-of-type(1)]:indent-0 sticky top-4 md:top-16 self-start flex justify-between flex-col items-start md:min-h-[calc(100vh-6rem)]">
           <div>
             <h2 className="section-heading">Constellations and Stars</h2>
@@ -28,15 +32,28 @@ export const ConstellationsIntro = () => {
             </p>
           </div>
         </div>
-        <div className="vertical-border border-l border-chilli-grey hidden md:block">
+        <div className="vertical-border border-l border-chilli-grey block">
           &nbsp;
         </div>
         <div className="grid gap-4 grid-cols-1 md:grid-cols-2">
           <div className="">
-            <ul className="text-base md:text-4xl xl:text-5xl tracking-tight leading-[1.1] [&>li]:pl-16 [&>li]:-indent-16">
-              <li className="flex justify-start gap-4 items-start">
-                <a href="#">Yuhua</a>
-                <span className="text-xs text-chilli-grey font-mono tracking-none ml-16 relative top-2 uppercase">
+            <h5 className="block md:hidden section-heading">Constellations</h5>
+            <ul className="text-base md:text-4xl xl:text-5xl leading-5 md:tracking-tight leading-[1.1] [&>li]:pl-16 [&>li]:-indent-16">
+              <li className="flex justify-start gap-4 items-start !indent-0 !pl-0">
+                <a
+                  href="#"
+                  className="indent-0 pl-0 hover:text-chilli-pink"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    const elem = document.getElementById("map");
+                    if (elem) {
+                      elem.scrollIntoView({ behavior: "smooth" });
+                    }
+                  }}
+                >
+                  Yuhua
+                </a>
+                <span className="text-[10px] lg:text-xs text-chilli-grey font-mono tracking-none relative top-1 lg:top-2 leading-tight uppercase indent-0 pl-0">
                   Click to view the promenade
                 </span>
               </li>
@@ -70,7 +87,10 @@ export const ConstellationsIntro = () => {
             </ul>
           </div>
           <div className="">
-            <ul className="text-base md:text-4xl xl:text-5xl tracking-tight leading-[1.1] [&>li]:pl-16 [&>li]:-indent-16">
+            <div className="block md:hidden border-t border-chilli-grey mb-8" />
+
+            <h5 className="block md:hidden section-heading">Stars</h5>
+            <ul className="text-base md:text-4xl xl:text-5xl leading-5 md:leading-tighter md:tracking-tight  [&>li]:pl-8 [&>li]:-indent-8 md:[&>li]:pl-16 md:[&>li]:-indent-16">
               <li>Zul&apos;s Traditional Dry Chilli</li>
               <li>Seng Hong Coffeeshop</li>
               <li>Makko Teck Neo </li>
