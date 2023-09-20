@@ -4,8 +4,8 @@ export const ConstellationsIntro = () => {
       id="constellations"
       className="relative w-full py-2 border-chilli-grey border-x px-4 scroll-my-16"
     >
-      <div className="grid grid-cols-1 md:grid-cols-[1fr_1px_3fr] lg:grid-cols-[1fr_1px_2fr] gap-4">
-        <div className="[&>p]:indent-[2em] [&_p:nth-of-type(1)]:indent-0 sticky top-16 self-start flex justify-between flex-col items-start min-h-[calc(100vh-6rem)]">
+      <div className="grid grid-cols-[1fr_1fr] md:grid-cols-[1fr_1px_3fr] lg:grid-cols-[1fr_1px_2fr] gap-4">
+        <div className="[&>p]:indent-[2em] [&_p:nth-of-type(1)]:indent-0 sticky top-4 md:top-16 self-start flex justify-between flex-col items-start md:min-h-[calc(100vh-6rem)]">
           <div>
             <h2 className="section-heading">Constellations and Stars</h2>
             <p>
@@ -31,9 +31,9 @@ export const ConstellationsIntro = () => {
         <div className="vertical-border border-l border-chilli-grey hidden md:block">
           &nbsp;
         </div>
-        <div className="grid gap-4 grid-cols-2">
+        <div className="grid gap-4 grid-cols-1 md:grid-cols-2">
           <div className="">
-            <ul className="text-4xl xl:text-5xl tracking-tight leading-[1.1] [&>li]:pl-16 [&>li]:-indent-16">
+            <ul className="text-base md:text-4xl xl:text-5xl tracking-tight leading-[1.1] [&>li]:pl-16 [&>li]:-indent-16">
               <li className="flex justify-start gap-4 items-start">
                 <a href="#">Yuhua</a>
                 <span className="text-xs text-chilli-grey font-mono tracking-none ml-16 relative top-2 uppercase">
@@ -69,8 +69,8 @@ export const ConstellationsIntro = () => {
               <li>Changi</li>
             </ul>
           </div>
-          <div className="xl:aspect-[9/5]">
-            <ul className="text-4xl xl:text-5xl tracking-tight leading-[1.1] [&>li]:pl-16 [&>li]:-indent-16">
+          <div className="">
+            <ul className="text-base md:text-4xl xl:text-5xl tracking-tight leading-[1.1] [&>li]:pl-16 [&>li]:-indent-16">
               <li>Zul&apos;s Traditional Dry Chilli</li>
               <li>Seng Hong Coffeeshop</li>
               <li>Makko Teck Neo </li>
