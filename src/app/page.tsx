@@ -6,6 +6,8 @@ import { Video } from "@/components/Video";
 import { ConstellationsIntro } from "@/components/ConstellationsIntro";
 import { Map } from "@/components/Map";
 import { Contributors } from "@/components/Contributors";
+import { Preorder } from "@/components/Preorder";
+import { Footer } from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -23,6 +25,10 @@ export default function Home() {
       <Map />
       <SpecialHr />
       <Contributors />
+      <SpecialHr />
+      <Preorder />
+      <SpecialHr />
+      <Footer />
     </main>
   );
 }

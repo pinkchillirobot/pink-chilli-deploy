@@ -3,6 +3,7 @@ import { useRef, useState, useEffect } from "react";
 import mapboxgl, { Map as TMap } from "mapbox-gl"; // eslint-disable-line import/no-webpack-loader-syntax
 import { Transition } from "@headlessui/react";
 import Image from "next/image";
+import btnClose from "../../public/btn-close.svg";
 
 mapboxgl.accessToken = process.env.NEXT_PUBLIC_MAPBOX_TOKEN || "";
 
@@ -344,7 +345,6 @@ export const Map = () => {
             id="map-container"
             className="map-container w-full h-full"
           />
-          {showPlace}
         </div>
         <Transition
           show={showPlace !== undefined}
@@ -374,12 +374,7 @@ export const Map = () => {
                   setShowPlace(() => undefined);
                 }}
               >
-                <Image
-                  src="/btn-close.svg"
-                  alt="Close"
-                  width={20}
-                  height={20}
-                />
+                <Image src={btnClose} alt="Close" width={20} height={20} />
               </button>
               <div className="scroller w-[calc(100%+40px)] h-full overflow-y-scroll">
                 <div className="w-[calc(100%-40px)] p-4">

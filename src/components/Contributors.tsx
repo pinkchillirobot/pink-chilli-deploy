@@ -42,7 +42,7 @@ export const Contributors = () => {
             </ul>
           </div>
           <div className="">
-            <div className="font-mono text-sm mb-4">
+            <div className="font-mono text-xs mb-4">
               Isabelle Der Hagopian
               <br />
               Architect <br />
