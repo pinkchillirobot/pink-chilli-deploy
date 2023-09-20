@@ -18,7 +18,9 @@ export const Preorder = () => {
             </p>
             <p>
               <a
-                href="#"
+                href="https://pagesetters.sg/?add-to-cart=2523&quantity=1"
+                target="_blank"
+                rel="noreferrer"
                 className="text-base inline-block px-4 py-1 border border-black rounded-full"
               >
                 Pre-order the book

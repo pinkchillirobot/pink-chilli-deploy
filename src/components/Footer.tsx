@@ -11,13 +11,38 @@ export const Footer = () => {
         </div>
         <div className="[&_a]:uppercase [&_a]:underline">
           <div className="flex justify-start gap-4">
-            <a href="#">Instagram</a>
-            <a href="#">G8A</a>
-            <a href="#">Stockists</a>
+            <a
+              href="https://www.instagram.com/tb80_space"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Instagram
+            </a>
+            <a
+              href="https://g8a-architects.com/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              G8A
+            </a>
+            <a href="#" target="_blank" rel="noreferrer">
+              Stockists
+            </a>
           </div>
           <div>
-            This website was designed by <a href="#">Practice Theory</a> and
-            developed in close collaboration with <a href="#">Good Work</a>.
+            This website was designed by{" "}
+            <a
+              href="https://practicetheory.com.sg/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Practice Theory
+            </a>{" "}
+            and developed in close collaboration with{" "}
+            <a href="https://goodwork.sg" target="_blank" rel="noreferrer">
+              Good Work
+            </a>
+            .
           </div>
         </div>
       </div>
