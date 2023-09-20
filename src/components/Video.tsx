@@ -8,7 +8,6 @@ export const Video = () => {
         src="https://www.youtube.com/embed/_hYIWAxNTC4"
         className="w-full aspect-video"
         title="Video"
-        frameBorder="0"
       />
     </section>
   );
