@@ -23,6 +23,9 @@ const config: Config = {
         sans: ["Suisse", ...defaultTheme.fontFamily.sans],
         mono: ["SuisseMono", ...defaultTheme.fontFamily.mono],
       },
+      screens: {
+        xs: "500px",
+      },
     },
   },
   plugins: [],
