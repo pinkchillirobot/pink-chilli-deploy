@@ -1,6 +1,6 @@
 import "./globals.css";
-import Image from "next/image";
 import { Metadata } from "next";
+import { MenuButton } from "@/components/MenuButton";
 
 export const metadata: Metadata = {
   title: "Pink Chilli in a Bowl",
@@ -18,20 +18,13 @@ export default function RootLayout({
         <div className="relative">
           <div
             id="sticky-nav"
-            className="mx-4 mb-0 sticky top-0 bg-white z-10 pt-4"
+            className="mx-4 mb-0 sticky top-0 bg-[transparent] md:bg-white z-10 pt-4"
           >
-            <div className="border-x border-chilli-grey flex justify-between px-4 pb-4">
-              <h1 className="font-mono text-xs uppercase">
+            <div className="border-x border-chilli-grey flex justify-end md:justify-between px-4 pb-4">
+              <h1 className="font-mono text-xs uppercase hidden md:block">
                 Pink Chilli In A Bowl
               </h1>
-              <button className="">
-                <Image
-                  src="/btn-hamburger.svg"
-                  alt="hamburger menu"
-                  width={20}
-                  height={20}
-                />
-              </button>
+              <MenuButton />
             </div>
           </div>
 

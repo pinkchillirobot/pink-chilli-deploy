@@ -1,8 +1,8 @@
 export const ConstellationsIntro = () => {
   return (
     <section
-      id="constellations_intro"
-      className="relative w-full py-2 border-chilli-grey border-x px-4"
+      id="constellations"
+      className="relative w-full py-2 border-chilli-grey border-x px-4 scroll-my-16"
     >
       <div className="grid grid-cols-1 md:grid-cols-[1fr_1px_3fr] lg:grid-cols-[1fr_1px_2fr] gap-4">
         <div className="[&>p]:indent-[2em] [&_p:nth-of-type(1)]:indent-0 sticky top-16 self-start flex justify-between flex-col items-start min-h-[calc(100vh-6rem)]">

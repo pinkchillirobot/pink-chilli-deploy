@@ -27,7 +27,7 @@ export const Events = () => {
   return (
     <section
       id="events"
-      className="relative w-full py-2 border-chilli-grey border-x px-4"
+      className="relative w-full py-2 border-chilli-grey border-x px-4 scroll-my-16"
     >
       <div className="grid grid-cols-1 md:grid-cols-[1fr_1px_2fr] gap-4">
         <div className="flex flex-col items-start justify-between">
