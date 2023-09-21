@@ -9,8 +9,12 @@ export const Footer = () => {
         <div className="vertical-border border-l border-chilli-grey hidden md:block">
           &nbsp;
         </div>
-        <div className="[&_a]:uppercase [&_a]:underline">
-          <div className="flex justify-start gap-4">
+
+        <div className="border-t border-chilli-grey w-full h-[1px] md:hidden block">
+          &nbsp;
+        </div>
+        <div className="[&_a]:uppercase [&_a]:underline grid grid-cols-[1fr_1px_2fr] md:block  gap-4 md:gap-0">
+          <div className="flex justify-start gap-1 flex-col md:flex-row md:gap-4">
             <a
               href="https://www.instagram.com/tb80_space"
               target="_blank"
@@ -29,6 +33,10 @@ export const Footer = () => {
               Stockists
             </a>
           </div>
+
+          <div className="vertical-border border-l border-chilli-grey md:hidden block">
+            &nbsp;
+          </div>
           <div>
             This website was designed by{" "}
             <a
@@ -36,11 +44,11 @@ export const Footer = () => {
               target="_blank"
               rel="noreferrer"
             >
-              Practice Theory
+              Practice&nbsp;Theory
             </a>{" "}
             and developed in close collaboration with{" "}
             <a href="https://goodwork.sg" target="_blank" rel="noreferrer">
-              Good Work
+              Good&nbsp;Work
             </a>
             .
           </div>
