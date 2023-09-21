@@ -35,31 +35,10 @@ const Events = defineType({
     },
 
     {
-      type: "datetime",
-      name: "datetimeStart",
-      title: "Start of Event",
-      description: "For generation of .cal file",
-    },
-
-    {
-      type: "datetime",
-      name: "datetimeEnd",
-      title: "End of Event",
-      description: "For generation of .cal file",
-    },
-
-    {
-      type: "string",
-      name: "venue",
-      title: "Event Venue",
-      description: "For generation of .cal file",
-    },
-
-    {
       type: "string",
       name: "url",
-      title: "Event URL (optional)",
-      description: "For generation of .cal file",
+      title: "Event URL",
+      description: "For clickthrough button",
     },
 
     {
