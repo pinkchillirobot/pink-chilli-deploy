@@ -1,5 +1,7 @@
 "use client";
+import Image from "next/image";
 import { useState } from "react";
+import btnClose from "../../public/btn-close.svg";
 
 const contributorsData = [
   {
@@ -213,6 +215,60 @@ export const Contributors = () => {
               <p className="">{contributorsData[activeIndex]?.description}</p>
             </div>
           )}
+        </div>
+      </div>
+      <div className="block md:hidden">
+        <div
+          className="fixed top-0 right-0 w-full h-full z-25 bg-[transparent] cursor-pointer"
+          style={{ display: activeIndex !== undefined ? "block" : "none" }}
+          onClick={() => {
+            setActiveIndex(() => undefined);
+          }}
+        >
+          &nbsp;
+        </div>
+        <div
+          className={`fixed top-0 right-0 w-full h-full overflow-hidden transition-all`}
+          style={{
+            zIndex: activeIndex !== undefined ? 30 : 0,
+            left: activeIndex !== undefined ? 0 : "100%",
+          }}
+        >
+          <div
+            className={`absolute w-full h-full max-w-[40rem] bg-white/90 border-l border-chilli-grey transition-all transition-500 top-0`}
+            style={{ right: activeIndex === undefined ? "-40rem" : 0 }}
+          >
+            <button
+              className="top-4 right-4 absolute p-1"
+              onClick={() => {
+                setActiveIndex(() => undefined);
+              }}
+            >
+              <Image src={btnClose} alt="Close" width={20} height={20} />
+            </button>
+            <div className="scroller w-[calc(100%+40px)] h-full overflow-y-scroll">
+              {activeIndex !== undefined && (
+                <div className="w-[calc(100%-40px)] p-4">
+                  <div className="mb-4 mt-2">
+                    {contributorsData[activeIndex]?.name}
+                  </div>
+                  <div className="font-mono text-xs mb-12">
+                    {contributorsData[activeIndex]?.title}
+                    {!!contributorsData[activeIndex]?.url && (
+                      <>
+                        <br />
+                        {contributorsData[activeIndex]?.url}
+                      </>
+                    )}
+                  </div>
+
+                  <p className="">
+                    {contributorsData[activeIndex]?.description}
+                  </p>
+                </div>
+              )}
+            </div>
+          </div>
         </div>
       </div>
     </section>

@@ -10,7 +10,7 @@ export const Preorder = () => {
       <div className="grid grid-cols-1 md:grid-cols-[1fr_1px_3fr] lg:grid-cols-[1fr_1px_2fr] gap-4">
         <div className="flex justify-between flex-col items-start">
           <div>
-            <h2 className="section-heading">Pre-order the Book</h2>
+            <h2 className="section-heading">Pre-order Our Book</h2>
             <p className="mb-4">
               Pre-order &ldquo;Pink Chilli in a Bowl&rdquo; online for S$150
               (excluding GST). Orders will be fulfilled post-launch on 9 October
