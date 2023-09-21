@@ -10,7 +10,7 @@ export const Preorder = () => {
       <div className="grid grid-cols-1 md:grid-cols-[1fr_1px_3fr] lg:grid-cols-[1fr_1px_2fr] gap-4">
         <div className="flex justify-between flex-col items-start order-2 md:order-1">
           <div className="flex justify-start flex-col w-full">
-            <h2 className="section-heading md:block hidden order-8 w-full">
+            <h2 className="section-heading md:block hidden order-8 w-full md:order-1">
               Pre-order our Book
             </h2>
             <p className="mb-4 order-2 md:order-1 w-full">
