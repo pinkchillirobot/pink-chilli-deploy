@@ -1,9 +1,157 @@
 "use client";
 import { useRef, useState, useEffect } from "react";
-import mapboxgl, { Map as TMap } from "mapbox-gl"; // eslint-disable-line import/no-webpack-loader-syntax
-import { Transition } from "@headlessui/react";
+import mapboxgl, { Map as TMap } from "mapbox-gl";
 import Image from "next/image";
 import btnClose from "../../public/btn-close.svg";
+import img1 from "../../public/constellation/yuhua-1.jpg";
+import img2 from "../../public/constellation/yuhua-2.jpg";
+import img3 from "../../public/constellation/yuhua-3.jpg";
+import img4 from "../../public/constellation/yuhua-4.jpg";
+import img5 from "../../public/constellation/yuhua-5.jpg";
+import img6 from "../../public/constellation/yuhua-6.jpg";
+import img7 from "../../public/constellation/yuhua-7.jpg";
+import img8 from "../../public/constellation/yuhua-8.jpg";
+import img9 from "../../public/constellation/yuhua-9.jpg";
+import img10 from "../../public/constellation/yuhua-10.jpg";
+import img11 from "../../public/constellation/yuhua-11.jpg";
+import img12 from "../../public/constellation/yuhua-12.jpg";
+
+const constellationData = [
+  {
+    name: "Yuhua Place West Village",
+    year: "1983 / 1986",
+    address: "347 Jurong East Avenue 1\nSingapore 600347",
+    category: "Landmark",
+    typology: "HDB",
+    ethnicity: <>&mdash;</>,
+    speciality: <>&mdash;</>,
+    image: img1,
+  },
+
+  {
+    name: "Nature Bakery",
+    year: "2005",
+    address: "345 Jurong East Street 31 #01-15\nSingapore 600345",
+    category: "Food",
+    typology: "Bakery",
+    ethnicity: <>Mixed</>,
+    speciality: "Pastries, chiffon cake, waffles, bread",
+    image: img2,
+  },
+
+  {
+    name: "Lee's Confectionery",
+    year: "2018",
+    address: "343 Jurong East Street 31 #01-59\nSingapore 600343",
+    category: "Food",
+    typology: "Confectionery",
+    ethnicity: "Western",
+    speciality: "Western pastries",
+    image: img3,
+  },
+  {
+    name: "Yuhua Place Market and Hawker Centre",
+    year: "1984",
+    address: "347 Jurong East Avenue 1\nSingapore 600347",
+    category: "Landmark",
+    typology: "Market / Hawker",
+    ethnicity: <>&mdash;</>,
+    speciality: <>&mdash;</>,
+    image: img4,
+  },
+  {
+    name: "Wonderyam Confectionery and Kueh Garden",
+    year: "2010s",
+    address: "348 Jurong East Avenue 1 #01-1245\nSingapore 600348",
+    category: "Food",
+    typology: "Confectionery",
+    ethnicity: "Chinese Teochew",
+    speciality: "Teochew pastries",
+    image: img5,
+  },
+  {
+    name: "Joo Siah Bak Koot Teh",
+    year: "1983",
+    address: "349 Jurong East Avenue 1 #01-1215\nSingapore 600349",
+    category: "Restaurant",
+    typology: "Coffee shop",
+    ethnicity: (
+      <>
+        Mixed
+        <br />
+        (Chinese, Malay)
+      </>
+    ),
+    speciality: <>Teochew bak kut teh</>,
+    image: img6,
+  },
+  {
+    name: "Richie's Crispy Puff",
+    year: "2000s",
+    address: "349 Jurong East Avenue 1\nSingapore 600349",
+    category: "Food",
+    typology: "Bakery",
+    ethnicity: <>Malay</>,
+    speciality: <>Curry puff</>,
+    image: img7,
+  },
+  {
+    name: "HDB Yuhua Village",
+    year: "1983-1985",
+    address: "24 Jurong West Avenue 1\nSingapore",
+    category: "Landmark",
+    typology: "HDB",
+    ethnicity: <>&mdash;</>,
+    speciality: <>&mdash;</>,
+    image: img8,
+  },
+  {
+    name: "Hiap Huat Cakeshop",
+    year: "1974",
+    address: "253 Jurong East Street 24\nSingapore 600253",
+    category: "Food",
+    typology: "Confectionery",
+    ethnicity: "Chinese Teochew",
+    speciality: "Teochew pastries",
+    image: img9,
+  },
+  {
+    name: "Zai Shun Curry Fish Head",
+    year: "1980s",
+    address: "253 Jurong East Street 24 #01-205\nSingapore 600253",
+    category: "Restaurant",
+    typology: "Zi char",
+    ethnicity: "Chinese",
+    speciality: "Fish head curry",
+    image: img10,
+  },
+  {
+    name: "Han N Han Peanut Cake",
+    year: "1999",
+    address: "252 Jurong East Street 24 #01-151\nSingapore 600252",
+    category: "Food",
+    typology: "Bakery",
+    ethnicity: (
+      <>
+        Mixed
+        <br />
+        (Chinese, Malay)
+      </>
+    ),
+    speciality: <>Peanut pancake (min jiang kueh)</>,
+    image: img11,
+  },
+  {
+    name: "Yuhua Village Market and Food Centre",
+    year: "1983",
+    address: "254 Jurong East Street 24\nSingapore 600254",
+    category: "Landmark",
+    typology: "Market / Hawker",
+    ethnicity: <>&mdash;</>,
+    speciality: <>&mdash;</>,
+    image: img12,
+  },
+];
 
 mapboxgl.accessToken = process.env.NEXT_PUBLIC_MAPBOX_TOKEN || "";
 
@@ -12,7 +160,6 @@ export const Map = () => {
   const mapContainer = useRef<HTMLDivElement>(null);
   const [lng, setLng] = useState(103.7344);
   const [lat, setLat] = useState(1.3443);
-  const [zoom, setZoom] = useState(15.2);
   const [showPlace, setShowPlace] = useState<number>();
 
   useEffect(() => {
@@ -24,7 +171,6 @@ export const Map = () => {
         2 -
         (2 * Math.max(300, Math.min(1000, mapContainer.current.offsetWidth))) /
           700;
-      setZoom(() => targetZoom);
     }
 
     map.current = new mapboxgl.Map({
@@ -121,6 +267,7 @@ export const Map = () => {
                   [103.73875781185268, 1.3434588300831223],
                   [103.73812976775525, 1.343843717846255],
                   [103.73795190391115, 1.3438479515344426],
+                  [103.73775430778005, 1.3435124085788175],
                 ],
                 type: "LineString",
               },
@@ -244,6 +391,17 @@ export const Map = () => {
                 type: "Point",
               },
             },
+
+            {
+              type: "Feature",
+              properties: {
+                label: 12,
+              },
+              geometry: {
+                coordinates: [103.73775430778005, 1.3435124085788175],
+                type: "Point",
+              },
+            },
           ],
         },
       });
@@ -300,16 +458,15 @@ export const Map = () => {
       }
       setLng(parseFloat(map.current.getCenter().lng.toFixed(4)));
       setLat(parseFloat(map.current.getCenter().lat.toFixed(4)));
-      setZoom(parseFloat(map.current.getZoom().toFixed(2)));
+      // setZoom(parseFloat(map.current.getZoom().toFixed(2)));
     });
 
     map.current.on("click", "point-bg", (e) => {
       const thisFeature = e.features?.[0];
       if (thisFeature) {
         const label = parseInt(thisFeature.properties?.label);
-
-        if (label > 0 && label < 12) {
-          setShowPlace(() => label);
+        if (label > 0 && label < 13) {
+          setShowPlace(() => label - 1);
         }
       }
     });
@@ -365,71 +522,78 @@ export const Map = () => {
             className="map-container w-full h-full"
           />
         </div>
-        <Transition
-          show={showPlace !== undefined}
-          enter="duration-500"
-          leave="duration-500"
+
+        <div
+          className="fixed top-0 right-0 w-full h-full z-25 bg-[transparent] cursor-pointer"
+          style={{ display: showPlace !== undefined ? "block" : "none" }}
+          onClick={() => {
+            setShowPlace(() => undefined);
+          }}
+        >
+          &nbsp;
+        </div>
+        <div
+          className={`fixed top-0 right-0 w-full h-full overflow-hidden transition-all`}
+          style={{
+            zIndex: showPlace !== undefined ? 30 : 0,
+            left: showPlace !== undefined ? 0 : "100%",
+          }}
         >
           <div
-            className="fixed top-0 right-0 w-full h-full z-25 bg-[transparent] cursor-pointer"
-            onScroll={(e) => e.stopPropagation()}
-            onClick={() => {
-              setShowPlace(() => undefined);
-            }}
+            className={`absolute w-full h-full max-w-[40rem] bg-white/90 border-l border-chilli-grey transition-all transition-500 top-0`}
+            style={{ right: showPlace === undefined ? "-40rem" : 0 }}
           >
-            &nbsp;
-          </div>
-          <div
-            className={`fixed top-0 right-0 w-full h-full overflow-hidden max-w-[40rem]`}
-            style={{ zIndex: showPlace === undefined ? 0 : 30 }}
-          >
-            <div
-              className={`absolute w-full h-full bg-white/90 border-l border-chilli-grey transition-all transition-500 top-0`}
-              style={{ left: showPlace === undefined ? "100%" : 0 }}
+            <button
+              className="top-4 right-4 absolute p-1"
+              onClick={() => {
+                setShowPlace(() => undefined);
+              }}
             >
-              <button
-                className="top-4 right-4 absolute p-1"
-                onClick={() => {
-                  setShowPlace(() => undefined);
-                }}
-              >
-                <Image src={btnClose} alt="Close" width={20} height={20} />
-              </button>
-              <div className="scroller w-[calc(100%+40px)] h-full overflow-y-scroll">
+              <Image src={btnClose} alt="Close" width={20} height={20} />
+            </button>
+            <div className="scroller w-[calc(100%+40px)] h-full overflow-y-scroll">
+              {showPlace !== undefined && (
                 <div className="w-[calc(100%-40px)] p-4">
                   <h4 className="text-4xl pt-8 tracking-tight m-0">
-                    Yuhua Place West Village
+                    {constellationData[showPlace].name}
                   </h4>
                   <h5 className="text-sm font-mono mt-0 mb-8">
-                    Est. 1983/1986
+                    Est. {constellationData[showPlace].year}
                   </h5>
-                  <address className="text-base not-italic leading-snug pb-4">
-                    347 Jurong East Avenue 1<br />
-                    Singapore 600347
+                  <address className="text-base not-italic leading-snug pb-4 whitespace-pre-line">
+                    {constellationData[showPlace].address}
                   </address>
-                  <div className="aspect-[5/4] bg-chilli-pink"></div>
+                  <div className="relative aspect-[5/4] bg-chilli-pink">
+                    <Image
+                      src={constellationData[showPlace].image}
+                      alt="image of place"
+                      className="w-full h-full"
+                      objectFit="cover"
+                      fill={true}
+                    />
+                  </div>
                   <div className="grid grid-cols-2 gap-4 pt-4">
-                    <div>Landmark</div>
+                    <div>{constellationData[showPlace].category}</div>
                     <div className="[&_label]:block [&_label]:font-mono [&_label]:text-sm [&>div]:mb-4">
                       <div>
                         <label>Typology</label>
-                        <span>HDB</span>
+                        <span>{constellationData[showPlace].typology}</span>
                       </div>
                       <div>
                         <label>Ethnicity</label>
-                        <span>-</span>
+                        <span>{constellationData[showPlace].ethnicity}</span>
                       </div>
                       <div>
                         <label>Specialty</label>
-                        <span>-</span>
+                        <span>{constellationData[showPlace].speciality}</span>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
+              )}
             </div>
           </div>
-        </Transition>
+        </div>
       </div>
     </>
   );
