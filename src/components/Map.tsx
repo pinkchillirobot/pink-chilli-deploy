@@ -568,7 +568,6 @@ export const Map = () => {
                       src={constellationData[showPlace].image}
                       alt="image of place"
                       className="w-full h-full"
-                      objectFit="cover"
                       fill={true}
                     />
                   </div>

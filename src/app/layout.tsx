@@ -10,11 +10,7 @@ export const metadata: Metadata = {
   keywords:
     "Singapore exploration, archive, forgotten places, iconic buildings, urban planning, design, cityscapes, food, eateries, architecture, landmarks, cultural diversity, street culture, Pink Chilli in a Bowl, Singapore eateries, hawkers, diversity, urbanism, travel, photography, cultural heritage, Swiss design, typology, Manuel Der Hagopian, Isabelle Der Hagopian, Mindy Tan, Don Wong, Stephanie Peh, Sarah Mineko Ichioka, Ming Tan, Adib Jalal, Ariel Lee, Practice Theory.",
 
-  icons: `${
-    process.env.VERCEL_URL
-      ? `https:${process.env.VERCEL_URL}`
-      : "http://localhost:3000"
-  }/favicon.png`,
+  icons: `/favicon.png`,
   openGraph: {
     title:
       "Pink Chilli in a Bowl: A unique exploration of Singapore’s Culture, Food, and Architecture",

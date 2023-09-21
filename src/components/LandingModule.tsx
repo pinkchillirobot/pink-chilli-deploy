@@ -39,7 +39,7 @@ export const LandingModule = () => {
               : `left-0 right-auto top-[60vh] w-[25vw] h-[25vw] lg:left-auto lg:right-0 lg:top-0 lg:h-[25vh] lg:w-[25vh]`
           }
         >
-          <Image src={I1} alt="" fill={true} objectFit="cover" />
+          <Image src={I1} alt="" fill={true} />
         </div>
         <div
           onClick={() => {
@@ -51,7 +51,7 @@ export const LandingModule = () => {
               : "w-[35vw] aspect-[1.66] top-[30vh] left-0 lg:top-[25vh] lg:w-[32vh] border border-chilli-grey"
           }
         >
-          <Image src={I2} alt="" fill={true} objectFit="cover" />
+          <Image src={I2} alt="" fill={true} />
         </div>
         <div
           onClick={() => {
@@ -63,7 +63,7 @@ export const LandingModule = () => {
               : "aspect-[7/9] left-auto right-0 top-[0vw] w-[26vw] md:aspect-[5/6] lg:aspect-[5/6.2] lg:left-0 lg:right-auto lg:top-[75vh] lg:w-[20vh]"
           }
         >
-          <Image src={I3} alt="" fill={true} objectFit="cover" />
+          <Image src={I3} alt="" fill={true} />
         </div>
         <div
           onClick={() => {
@@ -75,7 +75,7 @@ export const LandingModule = () => {
               : "aspect-[7/9] right-0 left-auto w-[35vw] top-[30vh] lg:aspect-[5/6.2] lg:right-auto lg:left-[calc(20vh+1rem)] lg:top-[75vh] lg:w-[20vh]"
           }
         >
-          <Image src={I4} alt="" fill={true} objectFit="cover" />
+          <Image src={I4} alt="" fill={true} />
         </div>
         <div
           onClick={() => {
@@ -87,7 +87,7 @@ export const LandingModule = () => {
               : "top-[60vh] right-0 w-[calc(100%-28vw)] aspect-[1.597] lg:top-[75vh] lg:w-[40vh] border border-chilli-grey"
           }
         >
-          <Image src={I5} alt="" fill={true} objectFit="cover" />
+          <Image src={I5} alt="" fill={true} />
         </div>
       </div>
     </div>
