@@ -87,15 +87,19 @@ export const Events = () => {
               <p
                 className="mb-4 hidden md:block"
                 dangerouslySetInnerHTML={{
-                  __html: data[0].description.replaceAll("\n", "<br />"),
+                  __html: data[slide].description.replaceAll("\n", "<br />"),
                 }}
               />
-              <a
-                href="#"
-                className="text-base px-4 py-1 border border-black rounded-full hidden md:inline-block"
-              >
-                Add this to calendar
-              </a>
+              {data[slide].url.length > 0 && (
+                <a
+                  href={data[slide].url}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-base px-4 py-1 border border-black rounded-full hidden md:inline-block"
+                >
+                  Event information
+                </a>
+              )}
             </article>
           )}
         </div>

@@ -161,6 +161,7 @@ export const Map = () => {
   const [lng, setLng] = useState(103.7344);
   const [lat, setLat] = useState(1.3443);
   const [showPlace, setShowPlace] = useState<number>();
+  const [zoom, setZoom] = useState<number>();
 
   useEffect(() => {
     if (map.current) return; // initialize map only once
@@ -171,6 +172,7 @@ export const Map = () => {
         2 -
         (2 * Math.max(300, Math.min(1000, mapContainer.current.offsetWidth))) /
           700;
+      setZoom(() => targetZoom);
     }
 
     map.current = new mapboxgl.Map({
@@ -182,6 +184,7 @@ export const Map = () => {
         [103.74543442130016, 1.3529306311433231],
       ],
       zoom: targetZoom,
+      scrollZoom: false,
     });
 
     map.current.on("load", () => {
@@ -458,7 +461,6 @@ export const Map = () => {
       }
       setLng(parseFloat(map.current.getCenter().lng.toFixed(4)));
       setLat(parseFloat(map.current.getCenter().lat.toFixed(4)));
-      // setZoom(parseFloat(map.current.getZoom().toFixed(2)));
     });
 
     map.current.on("click", "point-bg", (e) => {
@@ -490,6 +492,12 @@ export const Map = () => {
   }, []);
 
   useEffect(() => {
+    if (map.current && zoom !== undefined) {
+      map.current.zoomTo(zoom);
+    }
+  }, [zoom]);
+
+  useEffect(() => {
     let id: ReturnType<typeof setTimeout>;
     const handler = () => {
       if (id !== undefined) {
@@ -515,12 +523,34 @@ export const Map = () => {
         className="py-2 px-4 border-chilli-grey scroll-my-16 border-x"
         id="map"
       >
-        <div className="aspect-[4/3] md:aspect-[15/8] font-mono text-xs">
+        <div className="aspect-[4/3] md:aspect-[15/8] font-mono text-xs relative">
           <div
             ref={mapContainer}
             id="map-container"
             className="map-container w-full h-full"
           />
+          <div className="absolute right-2 bottom-2 flex flex-col gap-2 [&_button]:h-8 [&_button]:w-8 [&_button]:bg-white [&_button]:flex [&_button]:items-center [&_button]:justify-center [&_button]:text-lg">
+            <button
+              type="button"
+              onClick={() => {
+                if (zoom !== undefined) {
+                  setZoom(zoom + 0.2);
+                }
+              }}
+            >
+              +
+            </button>
+            <button
+              type="button"
+              onClick={() => {
+                if (zoom !== undefined) {
+                  setZoom(zoom - 0.2);
+                }
+              }}
+            >
+              -
+            </button>
+          </div>
         </div>
 
         <div
@@ -533,14 +563,15 @@ export const Map = () => {
           &nbsp;
         </div>
         <div
-          className={`fixed top-0 right-0 w-full h-full overflow-hidden transition-all max-w-[40rem]`}
+          className={`fixed top-0 right-0 w-full h-full overflow-hidden max-w-[40rem]`}
           style={{
+            transition: "all ease-out 500ms",
             zIndex: showPlace !== undefined ? 30 : 0,
             right: showPlace === undefined ? "-40rem" : "0",
           }}
         >
           <div
-            className={`absolute w-full h-full bg-white/90 border-l border-chilli-grey transition-all transition-500 top-0`}
+            className={`absolute w-full h-full bg-white/90 border-l border-chilli-grey top-0`}
           >
             <button
               className="top-4 right-4 absolute p-1"
@@ -562,9 +593,10 @@ export const Map = () => {
                   <address className="text-base not-italic leading-snug pb-4 whitespace-pre-line">
                     {constellationData[showPlace].address}
                   </address>
-                  <div className="relative aspect-[5/4] bg-chilli-pink">
+                  <div className="relative aspect-[5/4]">
                     <Image
                       src={constellationData[showPlace].image}
+                      placeholder="blur"
                       alt="image of place"
                       className="w-full h-full"
                       fill={true}

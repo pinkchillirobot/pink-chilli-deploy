@@ -1,12 +1,20 @@
 "use client";
 
 import { useState } from "react";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import I1 from "../../public/landing/1.jpg";
 import I2 from "../../public/landing/2.jpg";
 import I3 from "../../public/landing/3.jpg";
 import I4 from "../../public/landing/4.jpg";
 import I5 from "../../public/landing/5.jpg";
+
+const fadeInProps = (delay?: number) => ({
+  initial: { opacity: 0 },
+  whileInView: { opacity: 1 },
+  exit: { opacity: 0 },
+  transition: { delay: delay || 0.3, type: "spring", duration: 0.8 },
+});
 
 export const LandingModule = () => {
   const [open, setOpen] = useState<null | 1 | 2 | 3 | 4 | 5>(null);
@@ -16,20 +24,33 @@ export const LandingModule = () => {
       className="relative w-full pb-2 border-chilli-grey border-x px-4"
     >
       <div className="h-[100vh] [&>span]:tracking-tighter [&>span]:leading-none relative [&>span]:z-[2] [&>span]:pointer-events-none [&>*]:block [&>*]:absolute [&>div]:bg-white [&>div>img]:opacity-30 [&>div>img:hover]:opacity-60 [&>div>img]:transition-opacity [&>div>img]:cursor-pointer [&>div.open>img]:opacity-100 [&>div.open>img:hover]:opacity-90 [&>div]:transition-all">
-        <span className="text-[29vw]  xs:text-[20vw] top-0 left-0 sm:text-[23vw] lg:text-[29vh] lg:top-[0] lg:left-[0] -indent-[0.07em]">
+        <motion.span
+          {...fadeInProps(0.1)}
+          className="text-[29vw]  xs:text-[20vw] top-0 left-0 sm:text-[23vw] lg:text-[29vh] lg:top-[0] lg:left-[0] -indent-[0.07em]"
+        >
           Pink
-        </span>
-        <span className="text-[29vw] xs:text-[20vw] sm:text-[23vw] top-[15vh] right-0 lg:text-[29vh] lg:top-[25vh] lg:right-[0]">
+        </motion.span>
+        <motion.span
+          {...fadeInProps(0.2)}
+          className="text-[29vw] xs:text-[20vw] sm:text-[23vw] top-[15vh] right-0 lg:text-[29vh] lg:top-[25vh] lg:right-[0]"
+        >
           Chilli
-        </span>
-        <span className="text-[29vw]  xs:text-[20vw] sm:text-[23vw] top-[45vh] left-0 lg:text-[29vh] lg:top-[50vh] lg:left-[0] -indent-[0.07em] ">
+        </motion.span>
+        <motion.span
+          {...fadeInProps(0.3)}
+          className="text-[29vw]  xs:text-[20vw] sm:text-[23vw] top-[45vh] left-0 lg:text-[29vh] lg:top-[50vh] lg:left-[0] -indent-[0.07em] "
+        >
           in a
-        </span>
-        <span className="text-[29vw]  xs:text-[20vw] sm:text-[23vw] top-[75vh] right-0 lg:text-[29vh] lg:top-[50vh] lg:left-[46vh]">
+        </motion.span>
+        <motion.span
+          {...fadeInProps(0.4)}
+          className="text-[29vw]  xs:text-[20vw] sm:text-[23vw] top-[75vh] right-0 lg:text-[29vh] lg:top-[50vh] lg:left-[46vh]"
+        >
           Bowl
-        </span>
+        </motion.span>
 
-        <div
+        <motion.div
+          {...fadeInProps(0.25)}
           onClick={() => {
             setOpen((n) => (n === 1 ? null : 1));
           }}
@@ -40,8 +61,9 @@ export const LandingModule = () => {
           }
         >
           <Image src={I1} alt="" fill={true} />
-        </div>
-        <div
+        </motion.div>
+        <motion.div
+          {...fadeInProps(0.35)}
           onClick={() => {
             setOpen((n) => (n === 2 ? null : 2));
           }}
@@ -52,8 +74,9 @@ export const LandingModule = () => {
           }
         >
           <Image src={I2} alt="" fill={true} />
-        </div>
-        <div
+        </motion.div>
+        <motion.div
+          {...fadeInProps(0.45)}
           onClick={() => {
             setOpen((n) => (n === 3 ? null : 3));
           }}
@@ -64,8 +87,9 @@ export const LandingModule = () => {
           }
         >
           <Image src={I3} alt="" fill={true} />
-        </div>
-        <div
+        </motion.div>
+        <motion.div
+          {...fadeInProps(0.55)}
           onClick={() => {
             setOpen((n) => (n === 4 ? null : 4));
           }}
@@ -76,8 +100,9 @@ export const LandingModule = () => {
           }
         >
           <Image src={I4} alt="" fill={true} />
-        </div>
-        <div
+        </motion.div>
+        <motion.div
+          {...fadeInProps(0.65)}
           onClick={() => {
             setOpen((n) => (n === 5 ? null : 5));
           }}
@@ -88,7 +113,7 @@ export const LandingModule = () => {
           }
         >
           <Image src={I5} alt="" fill={true} />
-        </div>
+        </motion.div>
       </div>
     </div>
   );
