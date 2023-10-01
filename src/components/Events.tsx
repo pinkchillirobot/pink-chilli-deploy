@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import useSWR from "swr";
 import { createClient } from "@sanity/client";
 import imageUrlBuilder from "@sanity/image-url";
@@ -43,6 +43,37 @@ export const Events = () => {
 
   const [slide, setSlide] = useState(0);
 
+  useEffect(() => {
+    if (isLoading) {
+      return;
+    }
+    if (!Array.isArray(data)) {
+      return;
+    }
+    const head = document.querySelector("head");
+
+    const existingEventPreload = document.querySelectorAll(
+      "link[data-event-preload]"
+    );
+    if (existingEventPreload.length < 1) {
+      data
+        .map((d) => {
+          let link = document.createElement("link");
+          link.setAttribute("rel", "preload");
+          link.setAttribute("as", "image");
+          link.setAttribute("data-event-preload", "true");
+          link.setAttribute(
+            "href",
+            urlFor(d.thumbnail).width(1000).quality(75).url()
+          );
+          return link;
+        })
+        .forEach((node) => {
+          head?.append(node);
+        });
+    }
+  }, [data, isLoading]);
+
   if (error) {
     return (
       <section
@@ -71,35 +102,56 @@ export const Events = () => {
             <div>Loading</div>
           ) : (
             <article>
-              <h3
+              <motion.h3
                 className="mb-4"
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ delay: 0.0, type: "spring", duration: 1.85 }}
                 dangerouslySetInnerHTML={{
                   __html: data[slide].title.replaceAll("\n", "<br />"),
                 }}
               />
-              <p
+              <motion.p
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ delay: 0.1, type: "spring", duration: 1.85 }}
                 className="font-mono text-sm mb-0 md:mb-4"
                 dangerouslySetInnerHTML={{
                   __html: data[slide].details.replaceAll("\n", "<br />"),
                 }}
               />
 
-              <p
+              <motion.p
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ delay: 0.2, type: "spring", duration: 1.85 }}
                 className="mb-4 hidden md:block"
                 dangerouslySetInnerHTML={{
                   __html: data[slide].description.replaceAll("\n", "<br />"),
                 }}
               />
-              {data[slide].url.length > 0 && (
-                <a
-                  href={data[slide].url}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="text-base px-4 py-1 border border-black rounded-full hidden md:inline-block"
-                >
-                  Event information
-                </a>
-              )}
+              {data[slide]?.url?.length !== undefined &&
+                data[slide]?.url?.length > 0 && (
+                  <motion.a
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{
+                      delay: 0.3,
+                      type: "spring",
+                      duration: 1.85,
+                    }}
+                    href={data[slide].url}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-base px-4 py-1 border border-black rounded-full hidden md:inline-block"
+                  >
+                    Event information
+                  </motion.a>
+                )}
             </article>
           )}
         </div>
@@ -141,7 +193,7 @@ export const Events = () => {
                   initial={{ opacity: 0, zIndex: 2 }}
                   animate={{ opacity: 1, zIndex: 2 }}
                   exit={{ opacity: 0, zIndex: 2 }}
-                  transition={{ duration: 0.6, easings: ["easeOut"] }}
+                  transition={{ duration: 3.6, easings: ["easeOut"] }}
                 />
               </div>
             )}

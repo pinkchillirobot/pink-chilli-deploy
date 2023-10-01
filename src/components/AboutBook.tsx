@@ -5,14 +5,14 @@ const animProps = {
   initial: { top: "2rem", opacity: 0 },
   whileInView: { top: 0, opacity: 1 },
   exit: { top: "2rem", opacity: 0 },
-  transition: { delay: 0.2, type: "spring", duration: 0.85 },
+  transition: { delay: 0.2, type: "spring", duration: 1.85 },
 };
 
 const fadeInProps = {
   initial: { opacity: 0 },
   whileInView: { opacity: 1 },
   exit: { opacity: 0 },
-  transition: { delay: 0.3, type: "spring", duration: 0.85 },
+  transition: { delay: 0.3, type: "spring", duration: 1.85 },
 };
 
 export const AboutBook = () => {
@@ -62,7 +62,7 @@ export const AboutBook = () => {
           &nbsp;
         </div>
         <div>
-          <motion.div className="xl:aspect-[9/5] hidden md:block text-5xl tracking-tight leading-none [&>span]:block [&>span]:relative">
+          <motion.div className="xl:aspect-[9/5] hidden md:block text-5xl tracking-tight leading-none [&>span]:block [&>span]:relative md:pt-[8px]">
             <motion.span {...animProps}>28 Constellations</motion.span>
             <motion.span {...animProps}>12 Stars</motion.span>
             <motion.span {...animProps}>3 Essays</motion.span>
