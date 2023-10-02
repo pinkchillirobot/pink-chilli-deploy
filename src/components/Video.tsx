@@ -12,7 +12,7 @@ export const Video = () => {
       transition={{ delay: 0.0, type: "spring", duration: 1.85 }}
     >
       <iframe
-        src="https://www.youtube.com/embed/_hYIWAxNTC4"
+        src="https://www.youtube.com/embed/OpoftVo1w7o"
         className="w-full aspect-video"
         title="Video"
       />
