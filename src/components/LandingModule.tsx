@@ -44,7 +44,7 @@ export const LandingModule = () => {
         </motion.span>
         <motion.span
           {...fadeInProps(0.4)}
-          className="text-[29vw]  xs:text-[20vw] sm:text-[23vw] top-[75vh] right-0 lg:text-[29vh] lg:top-[50vh] lg:left-[46vh]"
+          className="text-[29vw]  xs:text-[20vw] sm:text-[23vw] top-[75vh] right-0 lg:text-[29vh] lg:top-[50vh] lg:left-[32vw]"
         >
           Bowl
         </motion.span>
