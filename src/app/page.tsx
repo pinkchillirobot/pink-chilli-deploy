@@ -27,21 +27,62 @@ export default function Home() {
 
       <main className="mx-4">
         <LandingModule />
-        <SpecialHr />
+        <SpecialHr
+          gapStyles={[
+            "top-[50%] left-[34.3%] translate-y-[-50%] translate-x-[-50%] md:block hidden",
+          ]}
+        />
         <Events />
-        <SpecialHr />
+        <SpecialHr
+          gapStyles={[
+            "top-[50%] left-[34.3%] translate-y-[-50%] translate-x-[-50%] md:block hidden",
+          ]}
+        />
         <AboutBook />
-        <SpecialHr />
+        <SpecialHr
+          gapStyles={[
+            "top-[50%] left-[34.3%] translate-y-[-50%] translate-x-[-50%] md:block hidden",
+          ]}
+        />
         <Video />
-        <SpecialHr />
+        <SpecialHr
+          gapStyles={[
+            "top-[50%] left-[34.3%] translate-y-[-50%] translate-x-[-50%] lg:block hidden",
+            "top-[50%] left-[26.75%] translate-y-[-50%] translate-x-[-50%] md:block hidden lg:hidden",
+            "top-[50%] left-[50%] translate-y-[-50%] translate-x-[-50%] md:hidden block",
+          ]}
+        />
         <ConstellationsIntro />
-        <SpecialHr />
+        <SpecialHr
+          gapStyles={[
+            "top-[50%] left-[34.3%] translate-y-[-50%] translate-x-[-50%] lg:block hidden",
+            "top-[50%] left-[26.75%] translate-y-[-50%] translate-x-[-50%] md:block hidden lg:hidden",
+            "top-[50%] left-[50%] translate-y-[-50%] translate-x-[-50%] md:hidden block",
+          ]}
+        />
         <Map />
-        <SpecialHr />
+        <SpecialHr
+          gapStyles={[
+            "top-[50%] left-[34.3%] translate-y-[-50%] translate-x-[-50%] lg:block hidden",
+            "top-[50%] left-[26.75%] translate-y-[-50%] translate-x-[-50%] md:block hidden lg:hidden",
+            "top-[50%] left-[50%] translate-y-[-50%] translate-x-[-50%] md:hidden block",
+          ]}
+        />
         <Contributors />
-        <SpecialHr />
+        <SpecialHr
+          gapStyles={[
+            "top-[50%] left-[34.3%] translate-y-[-50%] translate-x-[-50%] lg:block hidden",
+            "top-[50%] left-[26.75%] translate-y-[-50%] translate-x-[-50%] md:block hidden lg:hidden",
+            "top-[50%] left-[50%] translate-y-[-50%] translate-x-[-50%] md:hidden block",
+          ]}
+        />
         <Preorder />
-        <SpecialHr />
+        <SpecialHr
+          gapStyles={[
+            "top-[50%] left-[34.15%] translate-y-[-50%] translate-x-[-50%] lg:block hidden",
+            "top-[50%] left-[26.75%] translate-y-[-50%] translate-x-[-50%] md:block hidden lg:hidden",
+          ]}
+        />
         <Footer />
       </main>
     </>
