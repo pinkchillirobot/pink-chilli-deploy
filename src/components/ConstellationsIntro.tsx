@@ -1,6 +1,17 @@
 "use client";
 
-import { SpecialHr } from "./SpecialHr";
+import { motion } from "framer-motion";
+
+const constFadeInWithDelay = (n: number) => ({
+  initial: { opacity: 0, top: "1rem" },
+  whileInView: { opacity: 1, top: 0 },
+  exit: { opacity: 1, top: 0 },
+  transition: {
+    delay: n,
+    type: "spring",
+    duration: 1.85,
+  },
+});
 
 export const ConstellationsIntro = () => {
   return (
@@ -11,8 +22,21 @@ export const ConstellationsIntro = () => {
       <div className="grid grid-cols-[1fr_1px_1fr] md:grid-cols-[1fr_1px_3fr] lg:grid-cols-[1fr_1px_2fr] gap-4">
         <div className="[&>p]:indent-[2em] [&_p:nth-of-type(1)]:indent-0 sticky top-4 md:top-16 self-start flex justify-between flex-col items-start md:min-h-[calc(100vh-6rem)]">
           <div>
-            <h2 className="section-heading">Constellations and Stars</h2>
-            <p>
+            <motion.h2
+              className="section-heading"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ type: "spring", duration: 1.85 }}
+            >
+              Constellations and Stars
+            </motion.h2>
+            <motion.p
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ type: "spring", duration: 1.85 }}
+            >
               &ldquo;Pink Chilli in a Bowl&rdquo; is an invitation for the
               curious explorer to venture beyond the surface of Singapore’s
               urban landscape through twenty-eight constellations. Each
@@ -22,7 +46,7 @@ export const ConstellationsIntro = () => {
               multifaceted street culture. Unveil hidden links between seemingly
               disparate and diverse spaces that showcase the lesser-known
               humanistic side of an automated nation.
-            </p>
+            </motion.p>
           </div>
 
           <div className="">
@@ -60,33 +84,87 @@ export const ConstellationsIntro = () => {
                   <span className="touch:inline hidden">Tap to view</span>
                 </span>
               </li>
-              <li>Upper Bukit Timah</li>
-              <li>Tanglin Halt</li>
-              <li>Alexandra</li>
-              <li>Tiong Bahru</li>
-              <li>Bukit Pasoh</li>
-              <li>Kreta Ayer</li>
-              <li>Telok Ayer</li>
-              <li>Kampong Glam</li>
-              <li>Crawford</li>
-              <li>Little India</li>
-              <li>Lavender</li>
-              <li>Farrer Park</li>
-              <li>Balestier</li>
-              <li>Toa Payoh North</li>
-              <li>Sin Ming</li>
-              <li>Tai Seng</li>
-              <li>Sims Geylang</li>
-              <li>Geylang East</li>
-              <li>Joo Chiat</li>
-              <li>East Coast</li>
-              <li>Springleaf</li>
-              <li>Yishun</li>
-              <li>Kebun Baru</li>
-              <li>Jalan Kayu</li>
-              <li>Kembangan</li>
-              <li>Simpang Bedok</li>
-              <li>Changi</li>
+              <motion.li className="relative" {...constFadeInWithDelay(0.0)}>
+                Upper Bukit Timah
+              </motion.li>
+              <motion.li className="relative" {...constFadeInWithDelay(0.025)}>
+                Tanglin Halt
+              </motion.li>
+              <motion.li className="relative" {...constFadeInWithDelay(0.5)}>
+                Alexandra
+              </motion.li>
+              <motion.li className="relative" {...constFadeInWithDelay(0.75)}>
+                Tiong Bahru
+              </motion.li>
+              <motion.li className="relative" {...constFadeInWithDelay(0.1)}>
+                Bukit Pasoh
+              </motion.li>
+              <motion.li className="relative" {...constFadeInWithDelay(0.125)}>
+                Kreta Ayer
+              </motion.li>
+              <motion.li className="relative" {...constFadeInWithDelay(0.15)}>
+                Telok Ayer
+              </motion.li>
+              <motion.li className="relative" {...constFadeInWithDelay(0.175)}>
+                Kampong Glam
+              </motion.li>
+              <motion.li className="relative" {...constFadeInWithDelay(0.2)}>
+                Crawford
+              </motion.li>
+              <motion.li className="relative" {...constFadeInWithDelay(0.225)}>
+                Little India
+              </motion.li>
+              <motion.li className="relative" {...constFadeInWithDelay(0.25)}>
+                Lavender
+              </motion.li>
+              <motion.li className="relative" {...constFadeInWithDelay(0.275)}>
+                Farrer Park
+              </motion.li>
+              <motion.li className="relative" {...constFadeInWithDelay(0.3)}>
+                Balestier
+              </motion.li>
+              <motion.li className="relative" {...constFadeInWithDelay(0.325)}>
+                Toa Payoh North
+              </motion.li>
+              <motion.li className="relative" {...constFadeInWithDelay(0.35)}>
+                Sin Ming
+              </motion.li>
+              <motion.li className="relative" {...constFadeInWithDelay(0.375)}>
+                Tai Seng
+              </motion.li>
+              <motion.li className="relative" {...constFadeInWithDelay(0.4)}>
+                Sims Geylang
+              </motion.li>
+              <motion.li className="relative" {...constFadeInWithDelay(0.425)}>
+                Geylang East
+              </motion.li>
+              <motion.li className="relative" {...constFadeInWithDelay(0.45)}>
+                Joo Chiat
+              </motion.li>
+              <motion.li className="relative" {...constFadeInWithDelay(0.475)}>
+                East Coast
+              </motion.li>
+              <motion.li className="relative" {...constFadeInWithDelay(0.5)}>
+                Springleaf
+              </motion.li>
+              <motion.li className="relative" {...constFadeInWithDelay(0.525)}>
+                Yishun
+              </motion.li>
+              <motion.li className="relative" {...constFadeInWithDelay(0.55)}>
+                Kebun Baru
+              </motion.li>
+              <motion.li className="relative" {...constFadeInWithDelay(0.575)}>
+                Jalan Kayu
+              </motion.li>
+              <motion.li className="relative" {...constFadeInWithDelay(0.6)}>
+                Kembangan
+              </motion.li>
+              <motion.li className="relative" {...constFadeInWithDelay(0.625)}>
+                Simpang Bedok
+              </motion.li>
+              <motion.li className="relative" {...constFadeInWithDelay(0.65)}>
+                Changi
+              </motion.li>
             </ul>
           </div>
           <div className="">
@@ -94,18 +172,42 @@ export const ConstellationsIntro = () => {
 
             <h5 className="block md:hidden section-heading">Stars</h5>
             <ul className="text-base md:text-4xl xl:text-5xl leading-5 md:leading-tighter md:tracking-tight  [&>li]:pl-8 [&>li]:-indent-8 md:[&>li]:pl-16 md:[&>li]:-indent-16">
-              <li>Zul&apos;s Traditional Dry Chilli</li>
-              <li>Seng Hong Coffeeshop</li>
-              <li>Makko Teck Neo </li>
-              <li>Lim Joo Hin Eating House</li>
-              <li>Outram Park Ya Hua Rou Gu Cha</li>
-              <li>Lau Ah Tee Bak Kut Teh</li>
-              <li>River South Prawn Noodles</li>
-              <li>928 Yishun Laksa</li>
-              <li>Lau Wang Claypot Delights</li>
-              <li>Ponggol Nasi Lemak </li>
-              <li>Madeleine&apos;s Original Egg Tart</li>
-              <li>Fu Lin Tofu Yuen</li>
+              <motion.li className="relative" {...constFadeInWithDelay(0.125)}>
+                Zul&apos;s Traditional Dry Chilli
+              </motion.li>
+              <motion.li className="relative" {...constFadeInWithDelay(0.15)}>
+                Seng Hong Coffeeshop
+              </motion.li>
+              <motion.li className="relative" {...constFadeInWithDelay(0.175)}>
+                Makko Teck Neo{" "}
+              </motion.li>
+              <motion.li className="relative" {...constFadeInWithDelay(0.2)}>
+                Lim Joo Hin Eating House
+              </motion.li>
+              <motion.li className="relative" {...constFadeInWithDelay(0.225)}>
+                Outram Park Ya Hua Rou Gu Cha
+              </motion.li>
+              <motion.li className="relative" {...constFadeInWithDelay(0.25)}>
+                Lau Ah Tee Bak Kut Teh
+              </motion.li>
+              <motion.li className="relative" {...constFadeInWithDelay(0.275)}>
+                River South Prawn Noodles
+              </motion.li>
+              <motion.li className="relative" {...constFadeInWithDelay(0.3)}>
+                928 Yishun Laksa
+              </motion.li>
+              <motion.li className="relative" {...constFadeInWithDelay(0.325)}>
+                Lau Wang Claypot Delights
+              </motion.li>
+              <motion.li className="relative" {...constFadeInWithDelay(0.35)}>
+                Ponggol Nasi Lemak{" "}
+              </motion.li>
+              <motion.li className="relative" {...constFadeInWithDelay(0.375)}>
+                Madeleine&apos;s Original Egg Tart
+              </motion.li>
+              <motion.li className="relative" {...constFadeInWithDelay(0.4)}>
+                Fu Lin Tofu Yuen
+              </motion.li>
             </ul>
           </div>
         </div>

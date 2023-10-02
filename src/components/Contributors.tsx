@@ -2,6 +2,18 @@
 import Image from "next/image";
 import { useState } from "react";
 import btnClose from "../../public/btn-close.svg";
+import { motion } from "framer-motion";
+
+const fadeInWithDelay = (n: number) => ({
+  initial: { opacity: 0, top: "1rem" },
+  whileInView: { opacity: 1, top: 0 },
+  exit: { opacity: 1, top: 0 },
+  transition: {
+    delay: n,
+    type: "spring",
+    duration: 1.85,
+  },
+});
 
 const contributorsData = [
   {
@@ -153,15 +165,28 @@ export const Contributors = () => {
       <div className="grid grid-cols-[1fr_1px_1fr] md:grid-cols-[1fr_1px_3fr] lg:grid-cols-[1fr_1px_2fr] gap-4">
         <div className="[&>p]:indent-[2em] [&_p:nth-of-type(1)]:indent-0 self-start flex justify-between flex-col items-start">
           <div>
-            <h2 className="section-heading">Our Contributors</h2>
-            <p>
+            <motion.h2
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ type: "spring", duration: 1.85 }}
+              className="section-heading"
+            >
+              Our Contributors
+            </motion.h2>
+            <motion.p
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ type: "spring", duration: 1.85 }}
+            >
               We extend our heartfelt thanks to all the contributors of this
               book. Your passion, dedication, and unique perspectives have made
               this project come to life. We are deeply grateful for your
               valuable insights, creative contributions, and unwavering support.
               Together, we have created something truly special, and we look
               forward to the impact it will have on readers worldwide.
-            </p>
+            </motion.p>
           </div>
         </div>
         <div className="vertical-border border-l border-chilli-grey block">
@@ -171,8 +196,9 @@ export const Contributors = () => {
           <div className="flex flex-col align-start justify-between">
             <ul className="text-base md:text-3xl xl:text-4xl md:tracking-tight leading-[1.1] [&>li]:pl-0 [&>li]:-indent-0 md:[&>li]:pl-16 md:[&>li]:-indent-16">
               {contributorsData.map((c, n) => (
-                <li
+                <motion.li
                   className="mb-1"
+                  {...fadeInWithDelay(n * 0.15)}
                   key={c.name}
                   onClick={() => {
                     setActiveIndex(n);
@@ -191,7 +217,7 @@ export const Contributors = () => {
                   >
                     {c.name}
                   </a>
-                </li>
+                </motion.li>
               ))}
             </ul>
             <p className="text-xs mt-8 font-mono text-chilli-grey uppercase">
