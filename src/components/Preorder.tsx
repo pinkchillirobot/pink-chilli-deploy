@@ -29,7 +29,7 @@ export const Preorder = () => {
               </a>
             </p>
           </div>
-          <div className="[&_p]:font-mono [&_p]:text-xs order-3 md:block grid grid-cols-[1fr_1fr]">
+          <div className="[&_p]:font-mono [&_p]:text-xs order-3 md:block grid grid-cols-[1fr_1fr] gap-4">
             <p className="mb-0 self-end md:mb-8">
               ISBN 978-981-18-8118-3
               <br />

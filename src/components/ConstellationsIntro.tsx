@@ -35,7 +35,7 @@ export const ConstellationsIntro = () => {
         <div className="vertical-border border-l border-chilli-grey block">
           &nbsp;
         </div>
-        <div className="grid gap-4 grid-cols-1 md:grid-cols-2 pt-[8px]">
+        <div className="grid gap-4 grid-cols-1 md:grid-cols-2 pt-0 md:pt-[8px]">
           <div className="">
             <h5 className="block md:hidden section-heading">Constellations</h5>
             <ul className="text-base md:text-4xl xl:text-5xl leading-5 md:tracking-tight leading-[1.1] [&>li]:pl-16 [&>li]:-indent-16">
@@ -54,7 +54,12 @@ export const ConstellationsIntro = () => {
                   Yuhua
                 </a>
                 <span className="text-[10px] lg:text-xs text-chilli-grey font-mono tracking-none relative top-1 lg:top-2 leading-tight uppercase indent-0 pl-0">
-                  Click to view the promenade
+                  <span className="touch:hidden inline">
+                    Click to view the promenade
+                  </span>
+                  <span className="touch:inline hidden">
+                    Tap to view the promenade
+                  </span>
                 </span>
               </li>
               <li>Upper Bukit Timah</li>

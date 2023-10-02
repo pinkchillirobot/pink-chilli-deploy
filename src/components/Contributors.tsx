@@ -194,7 +194,7 @@ export const Contributors = () => {
                 </li>
               ))}
             </ul>
-            <p className="text-xs mt-8 font-mono text-chilli-grey">
+            <p className="text-xs mt-8 font-mono text-chilli-grey uppercase">
               <span className="touch:inline hidden">
                 Tap a contributor&apos;s name for their biography
               </span>
@@ -247,7 +247,7 @@ export const Contributors = () => {
           }}
         >
           <div
-            className={`absolute w-full h-full max-w-[40rem] bg-white/90 border-l border-chilli-grey transition-all transition-500 top-0`}
+            className={`absolute w-full h-full max-w-[40rem] bg-white/90 border-l border-chilli-grey transition-all transition-500 top-0 backdrop-blur-sm`}
             style={{ right: activeIndex === undefined ? "-40rem" : 0 }}
           >
             <button
@@ -269,7 +269,14 @@ export const Contributors = () => {
                     {!!contributorsData[activeIndex]?.url && (
                       <>
                         <br />
-                        {contributorsData[activeIndex]?.url}
+                        <a
+                          href={contributorsData[activeIndex]?.url}
+                          className="underline"
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          {contributorsData[activeIndex]?.url}
+                        </a>
                       </>
                     )}
                   </div>
