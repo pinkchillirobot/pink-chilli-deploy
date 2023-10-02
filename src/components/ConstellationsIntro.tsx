@@ -39,7 +39,7 @@ export const ConstellationsIntro = () => {
           <div className="">
             <h5 className="block md:hidden section-heading">Constellations</h5>
             <ul className="text-base md:text-4xl xl:text-5xl leading-5 md:tracking-tight leading-[1.1] [&>li]:pl-16 [&>li]:-indent-16">
-              <li className="flex justify-start gap-4 items-start !indent-0 !pl-0">
+              <li className="inline-block !indent-0 !pl-0 relative">
                 <a
                   href="#"
                   className="indent-0 pl-0 hover:text-chilli-pink"
@@ -53,13 +53,11 @@ export const ConstellationsIntro = () => {
                 >
                   Yuhua
                 </a>
-                <span className="text-[10px] lg:text-xs text-chilli-grey font-mono tracking-none relative top-1 lg:top-2 leading-tight uppercase indent-0 pl-0">
+                <span className="text-[10px] lg:text-xs text-chilli-grey font-mono tracking-none  top-[50%] translate-y-[-55%] left-[calc(100%+1em)] w-24 absolute md:leading-[1.1] lg:leading-[1.1] uppercase indent-0 pl-0">
                   <span className="touch:hidden inline">
                     Click to view the promenade
                   </span>
-                  <span className="touch:inline hidden">
-                    Tap to view the promenade
-                  </span>
+                  <span className="touch:inline hidden">Tap to view</span>
                 </span>
               </li>
               <li>Upper Bukit Timah</li>

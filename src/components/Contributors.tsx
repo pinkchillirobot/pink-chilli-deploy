@@ -240,15 +240,13 @@ export const Contributors = () => {
           &nbsp;
         </div>
         <div
-          className={`fixed top-0 right-0 w-full h-full overflow-hidden transition-all`}
+          className={`fixed top-0 right-0 w-full h-full overflow-hidden transition-all duration-500 z-[30]`}
           style={{
-            zIndex: activeIndex !== undefined ? 30 : 0,
             left: activeIndex !== undefined ? 0 : "100%",
           }}
         >
           <div
             className={`absolute w-full h-full max-w-[40rem] bg-white/90 border-l border-chilli-grey transition-all transition-500 top-0 backdrop-blur-sm`}
-            style={{ right: activeIndex === undefined ? "-40rem" : 0 }}
           >
             <button
               className="top-4 right-4 absolute p-1"

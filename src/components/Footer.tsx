@@ -15,8 +15,8 @@ export const Footer = () => {
         <div className="border-t border-chilli-grey w-full h-[1px] md:hidden block">
           &nbsp;
         </div>
-        <div className="[&_a]:uppercase [&_a]:underline grid grid-cols-[1fr_1px_2fr] md:block  gap-4 md:gap-0 pb-2">
-          <div className="flex justify-start gap-1 flex-col md:flex-row md:gap-4">
+        <div className="[&_a]:uppercase [&_a]:underline grid grid-cols-[1fr_1px_2fr] md:block gap-4 md:gap-0 pb-2">
+          <div className="flex justify-start gap-0 flex-col md:flex-row md:gap-4 leading-relaxed">
             <a
               href="https://www.instagram.com/tb80_space"
               target="_blank"
@@ -39,7 +39,7 @@ export const Footer = () => {
           <div className="vertical-border border-l border-chilli-grey md:hidden block">
             &nbsp;
           </div>
-          <div>
+          <div className="leading-relaxed">
             This website was designed by{" "}
             <a
               href="https://practicetheory.com.sg/"

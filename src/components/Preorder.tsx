@@ -42,7 +42,7 @@ export const Preorder = () => {
             <p className="self-end">
               For distribution enquiries, please write to us at{" "}
               <a
-                className="underline"
+                className="underline break-all"
                 href="mailto:distribution@pagesetters.com.sg"
               >
                 distribution@pagesetters.com.sg
