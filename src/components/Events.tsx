@@ -78,7 +78,7 @@ export const Events = () => {
     return (
       <section
         id="events"
-        className="relative w-full py-2 border-chilli-grey border-x px-4 scroll-my-16 bg-white z-[2]"
+        className="relative w-full border-chilli-grey border-x px-4 scroll-my-16 bg-white z-[2]"
       >
         An error has occurred.
       </section>
@@ -87,10 +87,10 @@ export const Events = () => {
   return (
     <section
       id="events"
-      className="relative w-full py-2 border-chilli-grey border-x px-4 scroll-my-16 bg-white z-[2]"
+      className="relative w-full border-chilli-grey border-x px-4 scroll-my-16 bg-white z-[2]"
     >
       <div className="grid grid-cols-1 md:grid-cols-[1fr_1px_2fr] gap-4">
-        <div className="flex flex-col items-start justify-between">
+        <div className="flex flex-col items-start justify-between py-2">
           <div>
             <h2 className="section-heading">Upcoming Events</h2>
             <p className="hidden md:block mb-8">
@@ -158,7 +158,7 @@ export const Events = () => {
         <div className="vertical-border border-l border-chilli-grey hidden md:block">
           &nbsp;
         </div>
-        <div>
+        <div className="py-2">
           <AnimatePresence>
             {data !== undefined && (
               <div className="width-full aspect-[4/3] lg:aspect-[9/5] overflow-hidden relative">

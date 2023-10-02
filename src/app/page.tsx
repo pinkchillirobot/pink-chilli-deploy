@@ -27,60 +27,54 @@ export default function Home() {
 
       <main className="mx-4">
         <LandingModule />
-        <SpecialHr
-          gapStyles={[
-            "top-[50%] left-[34.3%] translate-y-[-50%] translate-x-[-50%] md:block hidden",
-          ]}
-        />
+        <SpecialHr gapStyles={["grid-cols-[1fr_1rem_1px_1rem_2fr]"]} />
         <Events />
-        <SpecialHr
-          gapStyles={[
-            "top-[50%] left-[34.3%] translate-y-[-50%] translate-x-[-50%] md:block hidden",
-          ]}
-        />
+
+        <SpecialHr gapStyles={["grid-cols-[1fr_1rem_1px_1rem_2fr]"]} />
         <AboutBook />
-        <SpecialHr
-          gapStyles={[
-            "top-[50%] left-[34.3%] translate-y-[-50%] translate-x-[-50%] md:block hidden",
-          ]}
-        />
+        <SpecialHr gapStyles={["grid-cols-[1fr_1rem_1px_1rem_2fr]"]} />
         <Video />
+
         <SpecialHr
           gapStyles={[
-            "top-[50%] left-[34.3%] translate-y-[-50%] translate-x-[-50%] lg:block hidden",
-            "top-[50%] left-[26.75%] translate-y-[-50%] translate-x-[-50%] md:block hidden lg:hidden",
-            "top-[50%] left-[50%] translate-y-[-50%] translate-x-[-50%] md:hidden block",
+            "grid-cols-[1fr_1rem_1px_1rem_2fr] lg:grid hidden",
+            "grid-cols-[1fr_1rem_1px_1rem_3fr] md:grid hidden lg:hidden",
+
+            "grid-cols-[1fr_1rem_1px_1rem_1fr] md:hidden grid lg:hidden",
           ]}
         />
         <ConstellationsIntro />
         <SpecialHr
           gapStyles={[
-            "top-[50%] left-[34.3%] translate-y-[-50%] translate-x-[-50%] lg:block hidden",
-            "top-[50%] left-[26.75%] translate-y-[-50%] translate-x-[-50%] md:block hidden lg:hidden",
-            "top-[50%] left-[50%] translate-y-[-50%] translate-x-[-50%] md:hidden block",
+            "grid-cols-[1fr_1rem_1px_1rem_2fr] lg:grid hidden",
+            "grid-cols-[1fr_1rem_1px_1rem_3fr] md:grid hidden lg:hidden",
+
+            "grid-cols-[1fr_1rem_1px_1rem_1fr] md:hidden grid lg:hidden",
           ]}
         />
         <Map />
         <SpecialHr
           gapStyles={[
-            "top-[50%] left-[34.3%] translate-y-[-50%] translate-x-[-50%] lg:block hidden",
-            "top-[50%] left-[26.75%] translate-y-[-50%] translate-x-[-50%] md:block hidden lg:hidden",
-            "top-[50%] left-[50%] translate-y-[-50%] translate-x-[-50%] md:hidden block",
+            "grid-cols-[1fr_1rem_1px_1rem_2fr] lg:grid hidden",
+            "grid-cols-[1fr_1rem_1px_1rem_3fr] md:grid hidden lg:hidden",
+
+            "grid-cols-[1fr_1rem_1px_1rem_1fr] md:hidden grid lg:hidden",
           ]}
         />
         <Contributors />
         <SpecialHr
           gapStyles={[
-            "top-[50%] left-[34.3%] translate-y-[-50%] translate-x-[-50%] lg:block hidden",
-            "top-[50%] left-[26.75%] translate-y-[-50%] translate-x-[-50%] md:block hidden lg:hidden",
-            "top-[50%] left-[50%] translate-y-[-50%] translate-x-[-50%] md:hidden block",
+            "grid-cols-[1fr_1rem_1px_1rem_2fr] lg:grid hidden",
+            "grid-cols-[1fr_1rem_1px_1rem_3fr] md:grid hidden lg:hidden",
+
+            "grid-cols-[1fr_1rem_1px_1rem_1fr] md:hidden grid lg:hidden",
           ]}
         />
         <Preorder />
         <SpecialHr
           gapStyles={[
-            "top-[50%] left-[34.15%] translate-y-[-50%] translate-x-[-50%] lg:block hidden",
-            "top-[50%] left-[26.75%] translate-y-[-50%] translate-x-[-50%] md:block hidden lg:hidden",
+            "grid-cols-[1fr_1rem_1px_1rem_2fr] lg:grid hidden",
+            "grid-cols-[1fr_1rem_1px_1rem_3fr] md:grid hidden lg:hidden",
           ]}
         />
         <Footer />

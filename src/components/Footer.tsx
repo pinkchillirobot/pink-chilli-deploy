@@ -36,8 +36,13 @@ export const Footer = () => {
             </a>
           </div>
 
-          <div className="vertical-border border-l border-chilli-grey md:hidden block">
+          <div className="vertical-border border-l border-chilli-grey md:hidden block relative">
             &nbsp;
+            <b
+              className={
+                "block absolute bottom-[calc(100%)] -left-2 -top-6 w-4 h-4 bg-white md:hidden"
+              }
+            />
           </div>
           <div className="leading-relaxed">
             This website was designed by{" "}
