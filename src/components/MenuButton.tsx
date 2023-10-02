@@ -35,7 +35,7 @@ export const MenuButton = () => {
           setOpen((a) => !a);
         }}
         className="w-[25px] h-[25px] relative z-[35]"
-        style={{ left: open ? "1rem" : 0, transition: "all ease-out .2s" }}
+        style={{ left: open ? "1rem" : 0, transition: "all ease-out .5s" }}
       >
         <b
           style={{
@@ -45,7 +45,7 @@ export const MenuButton = () => {
             background: "#000",
             top: open ? "50%" : "100%",
             left: "50%",
-            transition: "all ease-out .2s",
+            transition: "all ease-out .5s",
             transform: `translate(-50%, -50%) rotate(${open ? -45 : 0}deg)`,
           }}
         />
@@ -58,7 +58,7 @@ export const MenuButton = () => {
             background: "#000",
             top: "50%",
             left: "50%",
-            transition: "all ease-out .2s",
+            transition: "all ease-out .5s",
             transform: `translate(-50%, -50%)`,
           }}
         />
@@ -70,7 +70,7 @@ export const MenuButton = () => {
             background: "#000",
             top: open ? "50%" : 0,
             left: "50%",
-            transition: "all ease-out .2s",
+            transition: "all ease-out .5s",
             transform: `translate(-50%, -50%) rotate(${open ? 45 : 0}deg)`,
           }}
         />
@@ -87,7 +87,7 @@ export const MenuButton = () => {
           &nbsp;
         </div>
         <div
-          className={`fixed top-0 right-0 w-full h-full overflow-hidden transition-all`}
+          className={`fixed top-0 right-0 w-full h-full overflow-hidden transition-all duration-700`}
           style={{ zIndex: open ? 30 : 0, left: open ? 0 : "100%" }}
         >
           <div className={`absolute w-full h-full bg-chilli-pink top-0`}>

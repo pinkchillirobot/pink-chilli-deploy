@@ -35,7 +35,7 @@ export const ConstellationsIntro = () => {
         <div className="vertical-border border-l border-chilli-grey block">
           &nbsp;
         </div>
-        <div className="grid gap-4 grid-cols-1 md:grid-cols-2">
+        <div className="grid gap-4 grid-cols-1 md:grid-cols-2 pt-[8px]">
           <div className="">
             <h5 className="block md:hidden section-heading">Constellations</h5>
             <ul className="text-base md:text-4xl xl:text-5xl leading-5 md:tracking-tight leading-[1.1] [&>li]:pl-16 [&>li]:-indent-16">

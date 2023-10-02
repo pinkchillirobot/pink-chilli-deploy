@@ -25,6 +25,7 @@ const config: Config = {
       },
       screens: {
         xs: "500px",
+        touch: { raw: "(pointer:coarse)" },
       },
     },
   },

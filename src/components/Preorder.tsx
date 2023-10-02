@@ -23,7 +23,7 @@ export const Preorder = () => {
                 href="https://pagesetters.sg/?add-to-cart=2523&quantity=1"
                 target="_blank"
                 rel="noreferrer"
-                className="text-base block text-center uppercase md:normal-case md:inline-block px-4 py-2 md:py-1 border border-black rounded-full"
+                className="text-base block text-center uppercase md:normal-case md:inline-block px-4 py-2 md:py-1 border border-black rounded-full hover:bg-chilli-pink transition-500 transition-all"
               >
                 Pre-order the book
               </a>
@@ -39,7 +39,15 @@ export const Preorder = () => {
               <br />
               Weight: 1.5kg
             </p>
-            <p className="self-end">Distributed by Pagesetters Services</p>
+            <p className="self-end">
+              For distribution enquiries, please write to us at{" "}
+              <a
+                className="underline"
+                href="mailto:distribution@pagesetters.com.sg"
+              >
+                distribution@pagesetters.com.sg
+              </a>
+            </p>
           </div>
         </div>
         <div className="vertical-border border-l border-chilli-grey hidden md:block order-4 md:order-2">

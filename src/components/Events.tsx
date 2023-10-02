@@ -147,7 +147,7 @@ export const Events = () => {
                     href={data[slide].url}
                     target="_blank"
                     rel="noreferrer"
-                    className="text-base px-4 py-1 border border-black rounded-full hidden md:inline-block"
+                    className="text-base px-4 py-1 border border-black rounded-full hidden md:inline-block hover:bg-chilli-pink transition-all duration-500"
                   >
                     Event information
                   </motion.a>
@@ -171,7 +171,7 @@ export const Events = () => {
                   <Image
                     src={btnSlideArrow}
                     alt="previous event"
-                    className="scale-x-[-1]"
+                    className="scale-x-[-1] w-8 h-8"
                   />
                 </button>
 
@@ -181,7 +181,11 @@ export const Events = () => {
                   }}
                   className="absolute top-[50%] right-4 z-[8] translate-y-[-50%]"
                 >
-                  <Image src={btnSlideArrow} alt="next event" />
+                  <Image
+                    src={btnSlideArrow}
+                    alt="next event"
+                    className="w-8 h-8"
+                  />
                 </button>
                 <motion.img
                   key={slide}

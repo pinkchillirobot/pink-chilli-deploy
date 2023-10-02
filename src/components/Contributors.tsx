@@ -167,7 +167,7 @@ export const Contributors = () => {
         <div className="vertical-border border-l border-chilli-grey block">
           &nbsp;
         </div>
-        <div className="grid gap-4 md:grid-cols-2 pt-8 md:pt-0">
+        <div className="grid gap-4 md:grid-cols-2 pt-8  md:pt-[15px]">
           <div className="flex flex-col align-start justify-between">
             <ul className="text-base md:text-3xl xl:text-4xl md:tracking-tight leading-[1.1] [&>li]:pl-0 [&>li]:-indent-0 md:[&>li]:pl-16 md:[&>li]:-indent-16">
               {contributorsData.map((c, n) => (
@@ -195,7 +195,12 @@ export const Contributors = () => {
               ))}
             </ul>
             <p className="text-xs mt-8 font-mono text-chilli-grey">
-              Tap a contributor&apos;s name for their biography
+              <span className="touch:inline hidden">
+                Tap a contributor&apos;s name for their biography
+              </span>
+              <span className="touch:hidden inline">
+                Click a contributor&apos;s name for their biography
+              </span>
             </p>
           </div>
           {activeIndex !== undefined && (
@@ -207,7 +212,14 @@ export const Contributors = () => {
                 {!!contributorsData[activeIndex]?.url && (
                   <>
                     <br />
-                    {contributorsData[activeIndex]?.url}
+                    <a
+                      href={contributorsData[activeIndex]?.url}
+                      className="underline"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      {contributorsData[activeIndex]?.url}
+                    </a>
                   </>
                 )}{" "}
               </div>

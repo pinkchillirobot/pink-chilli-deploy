@@ -31,7 +31,7 @@ const constellationData = [
   {
     name: "Nature Bakery",
     year: "2005",
-    address: "345 Jurong East Street 31 #01-15\nSingapore 600345",
+    address: "345 Jurong East Street 31, #01-15\nSingapore 600345",
     category: "Food",
     typology: "Bakery",
     ethnicity: <>Mixed</>,
@@ -42,7 +42,7 @@ const constellationData = [
   {
     name: "Lee's Confectionery",
     year: "2018",
-    address: "343 Jurong East Street 31 #01-59\nSingapore 600343",
+    address: "343 Jurong East Street 31, #01-59\nSingapore 600343",
     category: "Food",
     typology: "Confectionery",
     ethnicity: "Western",
@@ -62,7 +62,7 @@ const constellationData = [
   {
     name: "Wonderyam Confectionery and Kueh Garden",
     year: "2010s",
-    address: "348 Jurong East Avenue 1 #01-1245\nSingapore 600348",
+    address: "348 Jurong East Avenue 1, #01-1245\nSingapore 600348",
     category: "Food",
     typology: "Confectionery",
     ethnicity: "Chinese Teochew",
@@ -72,7 +72,7 @@ const constellationData = [
   {
     name: "Joo Siah Bak Koot Teh",
     year: "1983",
-    address: "349 Jurong East Avenue 1 #01-1215\nSingapore 600349",
+    address: "349 Jurong East Avenue 1, #01-1215\nSingapore 600349",
     category: "Restaurant",
     typology: "Coffee shop",
     ethnicity: (
@@ -118,7 +118,7 @@ const constellationData = [
   {
     name: "Zai Shun Curry Fish Head",
     year: "1980s",
-    address: "253 Jurong East Street 24 #01-205\nSingapore 600253",
+    address: "253 Jurong East Street 24, #01-205\nSingapore 600253",
     category: "Restaurant",
     typology: "Zi char",
     ethnicity: "Chinese",
@@ -128,7 +128,7 @@ const constellationData = [
   {
     name: "Han N Han Peanut Cake",
     year: "1999",
-    address: "252 Jurong East Street 24 #01-151\nSingapore 600252",
+    address: "252 Jurong East Street 24, #01-151\nSingapore 600252",
     category: "Food",
     typology: "Bakery",
     ethnicity: (
@@ -419,7 +419,7 @@ export const Map = () => {
         },
         paint: {
           "line-color": "#eba7ab",
-          "line-width": ["interpolate", ["linear"], ["zoom"], 14, 3, 15, 8],
+          "line-width": ["interpolate", ["linear"], ["zoom"], 14, 2, 15, 6],
         },
       });
 
@@ -445,6 +445,7 @@ export const Map = () => {
         layout: {
           visibility: "visible",
           "text-field": "{label}",
+          "text-font": ["Suisse Int'l Mono Regular"],
           "text-size": ["interpolate", ["linear"], ["zoom"], 14, 5, 15, 15],
           "icon-allow-overlap": true,
           "text-allow-overlap": true,
@@ -571,7 +572,7 @@ export const Map = () => {
           }}
         >
           <div
-            className={`absolute w-full h-full bg-white/90 border-l border-chilli-grey top-0`}
+            className={`absolute w-full h-full bg-white/90 border-l border-chilli-grey top-0 backdrop-blur-sm`}
           >
             <button
               className="top-4 right-4 absolute p-1"
@@ -581,9 +582,14 @@ export const Map = () => {
             >
               <Image src={btnClose} alt="Close" width={20} height={20} />
             </button>
+            {showPlace !== undefined && (
+              <span className="absolute top-4 left-4 bg-chilli-pink w-8 h-8 flex justify-center items-center rounded-full font-mono">
+                {showPlace + 1}
+              </span>
+            )}
             <div className="scroller w-[calc(100%+40px)] h-full overflow-y-scroll">
               {showPlace !== undefined && (
-                <div className="w-[calc(100%-40px)] p-4">
+                <div className="w-[calc(100%-40px)] p-4 pt-16">
                   <h4 className="text-4xl pt-8 tracking-tight m-0">
                     {constellationData[showPlace].name}
                   </h4>
