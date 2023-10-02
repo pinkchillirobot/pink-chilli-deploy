@@ -160,11 +160,11 @@ export const Contributors = () => {
   return (
     <section
       id="contributors"
-      className="relative w-full py-2 border-chilli-grey border-x px-4 scroll-my-16"
+      className="relative w-full border-chilli-grey border-x px-4 scroll-my-16"
     >
       <div className="grid grid-cols-[1fr_1px_1fr] md:grid-cols-[1fr_1px_3fr] lg:grid-cols-[1fr_1px_2fr] gap-4">
         <div className="[&>p]:indent-[2em] [&_p:nth-of-type(1)]:indent-0 self-start flex justify-between flex-col items-start">
-          <div>
+          <div className="py-2">
             <motion.h2
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
@@ -192,8 +192,8 @@ export const Contributors = () => {
         <div className="vertical-border border-l border-chilli-grey block">
           &nbsp;
         </div>
-        <div className="grid gap-4 md:grid-cols-2 pt-8  md:pt-[15px]">
-          <div className="flex flex-col align-start justify-between">
+        <div className="grid gap-4 md:grid-cols-2 pt-8 md:pt-[16px]">
+          <div className="flex flex-col align-start justify-between py-2">
             <ul className="text-base md:text-3xl xl:text-4xl md:tracking-tight leading-[1.1] [&>li]:pl-0 [&>li]:-indent-0 md:[&>li]:pl-16 md:[&>li]:-indent-16">
               {contributorsData.map((c, n) => (
                 <motion.li

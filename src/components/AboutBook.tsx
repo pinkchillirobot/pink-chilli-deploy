@@ -19,11 +19,11 @@ export const AboutBook = () => {
   return (
     <section
       id="about"
-      className="relative w-full py-2 border-chilli-grey border-x px-4  scroll-my-16"
+      className="relative w-full border-chilli-grey border-x px-4  scroll-my-16"
     >
       <div className="grid grid-cols-1 md:grid-cols-[1fr_1px_2fr] gap-4">
         <div className="flex flex-col items-start justify-between">
-          <div className="[&>p]:indent-[2em] [&_p:nth-of-type(1)]:indent-0">
+          <div className="[&>p]:indent-[2em] [&_p:nth-of-type(1)]:indent-0 py-2">
             <motion.h2 {...fadeInProps} className="section-heading">
               About the Book
             </motion.h2>
@@ -61,7 +61,7 @@ export const AboutBook = () => {
         <div className="vertical-border border-l border-chilli-grey hidden md:block">
           &nbsp;
         </div>
-        <div>
+        <div className="py-2">
           <motion.div className="xl:aspect-[9/5] hidden md:block text-5xl tracking-tight leading-none [&>span]:block [&>span]:relative md:pt-[8px]">
             <motion.span {...animProps}>28 Constellations</motion.span>
             <motion.span {...animProps}>12 Stars</motion.span>

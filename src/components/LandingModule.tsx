@@ -26,25 +26,25 @@ export const LandingModule = () => {
       <div className="h-[90vh] md:h-[100vh] [&>span]:tracking-tighter [&>span]:leading-none relative [&>span]:z-[2] [&>span]:pointer-events-none [&>*]:block [&>*]:absolute [&>div]:bg-white [&>div>img]:opacity-30 [&>div>img:hover]:opacity-60 [&>div>img]:transition-opacity [&>div>img]:cursor-pointer [&>div.open>img]:opacity-100 [&>div.open>img:hover]:opacity-100 [&>div]:transition-[left] [&>div]:transition-[right] [&>div]:transition-[width] [&>div]:duration-700 [&>div>img]:max-h-[100vh] [&>div.open>img]:object-contain [&>div.open]:bg-white/50">
         <motion.span
           {...fadeInProps(0.1)}
-          className="text-[29vw]  xs:text-[20vw] top-0 left-0 sm:text-[23vw] lg:text-[29vh] lg:top-[0] lg:left-[0] -indent-[0.07em]"
+          className="text-[29vw]  xs:text-[18vw] top-0 left-0 sm:text-[23vw] lg:text-[29vh] lg:top-[0] lg:left-[0] -indent-[0.07em]"
         >
           Pink
         </motion.span>
         <motion.span
           {...fadeInProps(0.2)}
-          className="text-[29vw] xs:text-[20vw] sm:text-[23vw] top-[15vh] right-0 lg:text-[29vh] lg:top-[25vh] lg:right-[0]"
+          className="text-[29vw] xs:text-[18vw] sm:text-[23vw] top-[15vh] right-0 lg:text-[29vh] lg:top-[25vh] lg:right-[0]"
         >
           Chilli
         </motion.span>
         <motion.span
           {...fadeInProps(0.3)}
-          className="text-[29vw]  xs:text-[20vw] sm:text-[23vw] top-[45vh] left-0 lg:text-[29vh] lg:top-[50vh] lg:left-[0] -indent-[0.07em] "
+          className="text-[29vw]  xs:text-[18vw] sm:text-[23vw] top-[45vh] left-0 lg:text-[29vh] lg:top-[50vh] lg:left-[0] -indent-[0.07em] "
         >
           in a
         </motion.span>
         <motion.span
           {...fadeInProps(0.4)}
-          className="text-[29vw]  xs:text-[20vw] sm:text-[23vw] top-[75vh] right-0 lg:text-[29vh] lg:top-[50vh] lg:left-[32vw]"
+          className="text-[29vw] lg:left[32vw]  lg:text-[29vh] xs:text-[18vw] sm:text-[23vw] top-[75vh] right-0 lg:top-[50vh] lg:left-[30vw]"
         >
           Bowl
         </motion.span>

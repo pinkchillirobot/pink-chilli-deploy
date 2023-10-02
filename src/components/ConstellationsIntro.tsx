@@ -17,11 +17,11 @@ export const ConstellationsIntro = () => {
   return (
     <section
       id="constellations"
-      className="relative w-full py-2 border-chilli-grey border-x px-4 scroll-my-16"
+      className="relative w-full border-chilli-grey border-x px-4 scroll-my-16"
     >
       <div className="grid grid-cols-[1fr_1px_1fr] md:grid-cols-[1fr_1px_3fr] lg:grid-cols-[1fr_1px_2fr] gap-4">
         <div className="[&>p]:indent-[2em] [&_p:nth-of-type(1)]:indent-0 sticky top-4 md:top-16 self-start flex justify-between flex-col items-start md:min-h-[calc(100vh-6rem)]">
-          <div>
+          <div className="py-2">
             <motion.h2
               className="section-heading"
               initial={{ opacity: 0 }}
@@ -60,7 +60,7 @@ export const ConstellationsIntro = () => {
           &nbsp;
         </div>
         <div className="grid gap-4 grid-cols-1 md:grid-cols-2 pt-0 md:pt-[8px]">
-          <div className="">
+          <div className="py-2">
             <h5 className="block md:hidden section-heading">Constellations</h5>
             <ul className="text-base md:text-4xl xl:text-5xl leading-5 md:tracking-tight leading-[1.1] [&>li]:pl-16 [&>li]:-indent-16">
               <li className="inline-block !indent-0 !pl-0 relative">
@@ -167,7 +167,7 @@ export const ConstellationsIntro = () => {
               </motion.li>
             </ul>
           </div>
-          <div className="">
+          <div className="py-2">
             <div className="block md:hidden border-t border-chilli-grey mb-8" />
 
             <h5 className="block md:hidden section-heading">Stars</h5>

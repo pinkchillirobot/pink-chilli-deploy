@@ -27,12 +27,18 @@ export default function Home() {
 
       <main className="mx-4">
         <LandingModule />
-        <SpecialHr gapStyles={["grid-cols-[1fr_1rem_1px_1rem_2fr]"]} />
+        <SpecialHr
+          gapStyles={["grid-cols-[1fr_1rem_1px_1rem_2fr] hidden md:grid"]}
+        />
         <Events />
 
-        <SpecialHr gapStyles={["grid-cols-[1fr_1rem_1px_1rem_2fr]"]} />
+        <SpecialHr
+          gapStyles={["grid-cols-[1fr_1rem_1px_1rem_2fr] hidden md:grid"]}
+        />
         <AboutBook />
-        <SpecialHr gapStyles={["grid-cols-[1fr_1rem_1px_1rem_2fr]"]} />
+        <SpecialHr
+          gapStyles={["grid-cols-[1fr_1rem_1px_1rem_2fr] hidden md:grid"]}
+        />
         <Video />
 
         <SpecialHr

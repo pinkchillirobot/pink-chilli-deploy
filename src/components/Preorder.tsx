@@ -7,11 +7,11 @@ export const Preorder = () => {
   return (
     <section
       id="buy"
-      className="relative w-full py-2 border-chilli-grey border-x px-4 scroll-my-16"
+      className="relative w-full border-chilli-grey border-x px-4 scroll-my-16"
     >
       <div className="grid grid-cols-1 md:grid-cols-[1fr_1px_3fr] lg:grid-cols-[1fr_1px_2fr] gap-4">
         <div className="flex justify-between flex-col items-start order-2 md:order-1">
-          <div className="flex justify-start flex-col w-full">
+          <div className="flex justify-start flex-col w-full py-2">
             <motion.h2
               className="section-heading md:block hidden order-8 w-full md:order-1"
               initial={{ opacity: 0 }}
@@ -86,7 +86,7 @@ export const Preorder = () => {
           &nbsp;
         </div>
 
-        <div className="order-1 md:order-3">
+        <div className="order-1 md:order-3 py-2">
           <motion.h2 className="section-heading block md:hidden">
             Pre-order our Book
           </motion.h2>
