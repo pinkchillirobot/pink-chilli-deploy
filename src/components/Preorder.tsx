@@ -49,7 +49,7 @@ export const Preorder = () => {
               </a>
             </motion.p>
           </div>
-          <div className="[&_p]:font-mono [&_p]:text-xs order-3 md:block grid grid-cols-[1fr_1fr] gap-4">
+          <div className="[&_p]:font-mono [&_p]:text-xs order-3 block">
             <motion.p
               className="mb-0 self-end md:mb-8"
               initial={{ opacity: 0 }}
@@ -66,7 +66,7 @@ export const Preorder = () => {
               Weight: 1.5kg
             </motion.p>
             <motion.p
-              className="self-end"
+              className="mt-4 md:mt-0"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               exit={{ opacity: 0 }}
@@ -74,7 +74,7 @@ export const Preorder = () => {
             >
               For distribution enquiries, please write to us at{" "}
               <a
-                className="underline break-all"
+                className="underline"
                 href="mailto:distribution@pagesetters.com.sg"
               >
                 distribution@pagesetters.com.sg
