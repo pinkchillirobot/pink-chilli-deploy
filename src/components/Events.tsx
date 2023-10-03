@@ -211,7 +211,6 @@ export const Events = () => {
                   __html: data[0].description.replaceAll("\n", "<br />"),
                 }}
               />
-
               {data[slide]?.url !== undefined && (
                 <motion.a
                   initial={{ opacity: 0 }}
