@@ -211,12 +211,25 @@ export const Events = () => {
                   __html: data[0].description.replaceAll("\n", "<br />"),
                 }}
               />
-              <a
-                href="#"
-                className="text-base px-4 py-2 border border-black rounded-full md:hidden block my-2 text-center uppercase"
-              >
-                Add this to calendar
-              </a>
+
+              {data[slide]?.url !== undefined && (
+                <motion.a
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{
+                    delay: 0.3,
+                    type: "spring",
+                    duration: 1.85,
+                  }}
+                  target="_blank"
+                  rel="noreferrer"
+                  href={data[slide].url}
+                  className="text-base px-4 py-2 border border-black rounded-full md:hidden block my-2 text-center uppercase"
+                >
+                  Event Information
+                </motion.a>
+              )}
             </>
           )}
           <div className="flex justify-center gap-2 md:hidden py-2">
