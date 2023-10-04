@@ -48,3 +48,105 @@ body {
   left: 1rem;
   @apply text-[10px] md:text-xs absolute bottom-1 left-1;
 }
+
+#landing-module-base {
+  aspect-ratio: 1 / 2;
+  @apply w-full relative;
+
+  span {
+    @apply tracking-tighter leading-none leading-none z-[2] pointer-events-none;
+  }
+
+  > * {
+    @apply block absolute;
+  }
+
+  > div {
+    @apply bg-white duration-700;
+    transition: none;
+
+    > img {
+      @apply opacity-30 transition-opacity cursor-pointer max-h-[100vh];
+
+      &:hover {
+        @apply opacity-60;
+      }
+    }
+
+    &.open {
+      @apply bg-white/50;
+
+      > img {
+        @apply object-contain;
+
+        &:hover {
+          @apply opacity-100;
+        }
+      }
+    }
+  }
+}
+
+@media (orientation: portrait) {
+  #landing-module-base {
+    aspect-ratio: 1 / 1.7;
+
+    span {
+      @apply text-[29vw];
+    }
+
+    span.type-1 {
+      @apply top-0 left-0 -indent-[0.07em];
+    }
+
+    span.type-2 {
+      @apply top-[17%] right-0;
+    }
+
+    span.type-3 {
+      @apply top-[51%] left-0 -indent-[0.07em];
+    }
+
+    span.type-4 {
+      @apply top-[85%] right-0 left-[unset];
+    }
+  }
+}
+
+@media (orientation: landscape) {
+  #landing-module-base {
+    aspect-ratio: 3 / 2;
+
+    span {
+      @apply text-[19vw];
+    }
+
+    span.type-1 {
+      @apply top-0 left-0 -indent-[0.07em];
+    }
+
+    span.type-2 {
+      @apply top-[25%] right-0;
+    }
+
+    span.type-3 {
+      @apply top-[50%] left-0 -indent-[0.07em];
+    }
+
+    span.type-4 {
+      @apply top-[50%] left-[30vw] right-[unset];
+    }
+  }
+}
+
+/*
+					"[&>span]:tracking-tighter [&>span]:leading-none [&>span]:z-[2] [&>span]:pointer-events-none [&>*]:block [&>*]:absolute [&>div]:bg-white [&>div>img]:opacity-30 [&>div>img:hover]:opacity-60 [&>div>img]:transition-opacity [&>div>img]:cursor-pointer [&>div.open>img]:opacity-100 [&>div.open>img:hover]:opacity-100 [&>div]:transition-[left] [&>div]:transition-[right] [&>div]:transition-[width] [&>div]:duration-700 [&>div>img]:max-h-[100vh] [&>div.open>img]:object-contain [&>div.open]:bg-white/50 w-full aspect-[1/2] sm:aspect-[1/2] md:aspect-[2/3]"
+
+
+  sm: '640px',
+  md: '768px',
+  lg: '1024px',
+  xl: '1280px',
+  '2xl': '1536px'
+
+*/

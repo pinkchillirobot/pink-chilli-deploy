@@ -23,29 +23,17 @@ export const LandingModule = () => {
       id="landing-module"
       className="relative w-full pb-2 border-chilli-grey border-x px-4"
     >
-      <div className="h-[90vh] md:h-[100vh] [&>span]:tracking-tighter [&>span]:leading-none relative [&>span]:z-[2] [&>span]:pointer-events-none [&>*]:block [&>*]:absolute [&>div]:bg-white [&>div>img]:opacity-30 [&>div>img:hover]:opacity-60 [&>div>img]:transition-opacity [&>div>img]:cursor-pointer [&>div.open>img]:opacity-100 [&>div.open>img:hover]:opacity-100 [&>div]:transition-[left] [&>div]:transition-[right] [&>div]:transition-[width] [&>div]:duration-700 [&>div>img]:max-h-[100vh] [&>div.open>img]:object-contain [&>div.open]:bg-white/50">
-        <motion.span
-          {...fadeInProps(0.1)}
-          className="text-[29vw]  xs:text-[18vw] top-0 left-0 sm:text-[23vw] lg:text-[29vh] lg:top-[0] lg:left-[0] -indent-[0.07em]"
-        >
+      <div id="landing-module-base" className={""}>
+        <motion.span {...fadeInProps(0.1)} className="type-1 ">
           Pink
         </motion.span>
-        <motion.span
-          {...fadeInProps(0.2)}
-          className="text-[29vw] xs:text-[18vw] sm:text-[23vw] top-[15vh] right-0 lg:text-[29vh] lg:top-[25vh] lg:right-[0]"
-        >
+        <motion.span {...fadeInProps(0.2)} className="type-2">
           Chilli
         </motion.span>
-        <motion.span
-          {...fadeInProps(0.3)}
-          className="text-[29vw]  xs:text-[18vw] sm:text-[23vw] top-[45vh] left-0 lg:text-[29vh] lg:top-[50vh] lg:left-[0] -indent-[0.07em] "
-        >
+        <motion.span {...fadeInProps(0.3)} className="type-3">
           in a
         </motion.span>
-        <motion.span
-          {...fadeInProps(0.4)}
-          className="text-[29vw] lg:left[32vw]  lg:text-[29vh] xs:text-[18vw] sm:text-[23vw] top-[75vh] right-0 lg:top-[50vh] lg:left-[30vw]"
-        >
+        <motion.span {...fadeInProps(0.4)} className="type-4">
           Bowl
         </motion.span>
 
@@ -56,8 +44,8 @@ export const LandingModule = () => {
           }}
           className={
             open === 1
-              ? "left-0 right-auto top-[60vh] w-full lg:left-auto lg:right-0 lg:top-0 lg:w-full aspect-[1] lg:aspect-[1] z-[4] open"
-              : `left-0 right-auto top-[60vh] w-[25vw] h-[25vw] lg:left-auto lg:right-0 lg:top-0 lg:h-[25vh] lg:w-[25vh]`
+              ? "left-0 right-auto top-[60%] w-full lg:left-auto lg:right-0 lg:top-0 lg:w-full aspect-[1] lg:aspect-[1] z-[4] open"
+              : `left-0 right-auto top-[60%] w-[25vw] h-[25vw] lg:left-auto lg:right-0 lg:top-0 lg:h-[25vh] lg:w-[25vh]`
           }
         >
           <Image src={I1} alt="" fill={true} />
@@ -69,8 +57,8 @@ export const LandingModule = () => {
           }}
           className={
             open === 2
-              ? "top-[30vh] left-0 right-0 w-full aspect-[1.56] lg:w-full lg:left-0 lg:right-0 lg:top-[25vh] lg:h-auto z-[4] open border border-chilli-grey"
-              : "w-[35vw] aspect-[1.66] top-[30vh] left-0 lg:top-[25vh] lg:w-[32vh] border border-chilli-grey"
+              ? "top-[30%] left-0 right-0 w-full aspect-[1.56] lg:w-full lg:left-0 lg:right-0 lg:top-[25%] lg:h-auto z-[4] open border border-chilli-grey"
+              : "w-[35vw] aspect-[1.66] top-[30%] left-0 lg:top-[25%] lg:w-[32vh] border border-chilli-grey"
           }
         >
           <Image src={I2} alt="" fill={true} />
@@ -82,8 +70,8 @@ export const LandingModule = () => {
           }}
           className={
             open === 3
-              ? "top-0 left-auto right-0 w-full aspect-[.833] lg:w-full lg:left-0 lg:right-auto lg:top-[75vh] lg:h-auto z-[4] open lg:aspect-[.833]"
-              : "aspect-[7/9] left-auto right-0 top-[0vw] w-[26vw] md:aspect-[5/6] lg:aspect-[5/6.2] lg:left-0 lg:right-auto lg:top-[75vh] lg:w-[20vh]"
+              ? "top-0 left-auto right-0 w-full aspect-[.833] lg:w-full lg:left-0 lg:right-auto lg:top-[75%] lg:h-auto z-[4] open lg:aspect-[.833]"
+              : "aspect-[7/9] left-auto right-0 top-0 w-[26vw] md:aspect-[5/6] lg:aspect-[5/6.2] lg:left-0 lg:right-auto lg:top-[75%] lg:w-[20vh]"
           }
         >
           <Image src={I3} alt="" fill={true} />
@@ -95,8 +83,8 @@ export const LandingModule = () => {
           }}
           className={
             open === 4
-              ? "top-[30vh] left-auto right-0 w-full aspect-[.555] lg:w-full lg:left-0 lg:right-auto lg:top-[75vh] lg:h-auto z-[4] open lg:aspect-[.555]"
-              : "aspect-[7/9] right-0 left-auto w-[35vw] top-[30vh] lg:aspect-[5/6.2] lg:right-auto lg:left-[calc(20vh+1rem)] lg:top-[75vh] lg:w-[20vh]"
+              ? "top-[30%] left-auto right-0 w-full aspect-[.555] lg:w-full lg:left-0 lg:right-auto lg:top-[75%] lg:h-auto z-[4] open lg:aspect-[.555]"
+              : "aspect-[7/9] right-0 left-auto w-[35vw] top-[30%] lg:aspect-[5/6.2] lg:right-auto lg:left-[calc(20vh+1rem)] lg:top-[75%] lg:w-[20vh]"
           }
         >
           <Image src={I4} alt="" fill={true} />
@@ -108,8 +96,8 @@ export const LandingModule = () => {
           }}
           className={
             open === 5
-              ? "top-[60vh] left-auto right-0 w-full aspect-[1.667] lg:w-full lg:left-auto lg:right-0 lg:top-[75vh] lg:h-auto z-[4] open lg:aspect-[1.667] border border-chilli-grey"
-              : "top-[60vh] right-0 w-[calc(100%-28vw)] aspect-[1.597] lg:top-[75vh] lg:w-[40vh] border border-chilli-grey"
+              ? "top-[60%] left-auto right-0 w-full aspect-[1.667] lg:w-full lg:left-auto lg:right-0 lg:top-[75%] lg:h-auto z-[4] open lg:aspect-[1.667] border border-chilli-grey"
+              : "top-[60%] right-0 w-[calc(100%-28vw)] aspect-[1.597] lg:top-[75%] lg:w-[40vh] border border-chilli-grey"
           }
         >
           <Image src={I5} alt="" fill={true} />
