@@ -2,16 +2,15 @@
 
 import { motion } from "framer-motion";
 
-const constFadeInWithDelay = (n: number) => ({
+const constFadeInWithDelay = {
   initial: { opacity: 0, top: "1rem" },
   whileInView: { opacity: 1, top: 0 },
   exit: { opacity: 1, top: 0 },
   transition: {
-    delay: n,
     type: "spring",
     duration: 1.85,
   },
-});
+};
 
 export const ConstellationsIntro = () => {
   return (
@@ -84,85 +83,85 @@ export const ConstellationsIntro = () => {
                   <span className="touch:inline hidden">Tap to view</span>
                 </span>
               </li>
-              <motion.li className="relative" {...constFadeInWithDelay(0.0)}>
+              <motion.li className="relative" {...constFadeInWithDelay}>
                 Upper Bukit Timah
               </motion.li>
-              <motion.li className="relative" {...constFadeInWithDelay(0.025)}>
+              <motion.li className="relative" {...constFadeInWithDelay}>
                 Tanglin Halt
               </motion.li>
-              <motion.li className="relative" {...constFadeInWithDelay(0.5)}>
+              <motion.li className="relative" {...constFadeInWithDelay}>
                 Alexandra
               </motion.li>
-              <motion.li className="relative" {...constFadeInWithDelay(0.75)}>
+              <motion.li className="relative" {...constFadeInWithDelay}>
                 Tiong Bahru
               </motion.li>
-              <motion.li className="relative" {...constFadeInWithDelay(0.1)}>
+              <motion.li className="relative" {...constFadeInWithDelay}>
                 Bukit Pasoh
               </motion.li>
-              <motion.li className="relative" {...constFadeInWithDelay(0.125)}>
+              <motion.li className="relative" {...constFadeInWithDelay}>
                 Kreta Ayer
               </motion.li>
-              <motion.li className="relative" {...constFadeInWithDelay(0.15)}>
+              <motion.li className="relative" {...constFadeInWithDelay}>
                 Telok Ayer
               </motion.li>
-              <motion.li className="relative" {...constFadeInWithDelay(0.175)}>
+              <motion.li className="relative" {...constFadeInWithDelay}>
                 Kampong Glam
               </motion.li>
-              <motion.li className="relative" {...constFadeInWithDelay(0.2)}>
+              <motion.li className="relative" {...constFadeInWithDelay}>
                 Crawford
               </motion.li>
-              <motion.li className="relative" {...constFadeInWithDelay(0.225)}>
+              <motion.li className="relative" {...constFadeInWithDelay}>
                 Little India
               </motion.li>
-              <motion.li className="relative" {...constFadeInWithDelay(0.25)}>
+              <motion.li className="relative" {...constFadeInWithDelay}>
                 Lavender
               </motion.li>
-              <motion.li className="relative" {...constFadeInWithDelay(0.275)}>
+              <motion.li className="relative" {...constFadeInWithDelay}>
                 Farrer Park
               </motion.li>
-              <motion.li className="relative" {...constFadeInWithDelay(0.3)}>
+              <motion.li className="relative" {...constFadeInWithDelay}>
                 Balestier
               </motion.li>
-              <motion.li className="relative" {...constFadeInWithDelay(0.325)}>
+              <motion.li className="relative" {...constFadeInWithDelay}>
                 Toa Payoh North
               </motion.li>
-              <motion.li className="relative" {...constFadeInWithDelay(0.35)}>
+              <motion.li className="relative" {...constFadeInWithDelay}>
                 Sin Ming
               </motion.li>
-              <motion.li className="relative" {...constFadeInWithDelay(0.375)}>
+              <motion.li className="relative" {...constFadeInWithDelay}>
                 Tai Seng
               </motion.li>
-              <motion.li className="relative" {...constFadeInWithDelay(0.4)}>
+              <motion.li className="relative" {...constFadeInWithDelay}>
                 Sims Geylang
               </motion.li>
-              <motion.li className="relative" {...constFadeInWithDelay(0.425)}>
+              <motion.li className="relative" {...constFadeInWithDelay}>
                 Geylang East
               </motion.li>
-              <motion.li className="relative" {...constFadeInWithDelay(0.45)}>
+              <motion.li className="relative" {...constFadeInWithDelay}>
                 Joo Chiat
               </motion.li>
-              <motion.li className="relative" {...constFadeInWithDelay(0.475)}>
+              <motion.li className="relative" {...constFadeInWithDelay}>
                 East Coast
               </motion.li>
-              <motion.li className="relative" {...constFadeInWithDelay(0.5)}>
+              <motion.li className="relative" {...constFadeInWithDelay}>
                 Springleaf
               </motion.li>
-              <motion.li className="relative" {...constFadeInWithDelay(0.525)}>
+              <motion.li className="relative" {...constFadeInWithDelay}>
                 Yishun
               </motion.li>
-              <motion.li className="relative" {...constFadeInWithDelay(0.55)}>
+              <motion.li className="relative" {...constFadeInWithDelay}>
                 Kebun Baru
               </motion.li>
-              <motion.li className="relative" {...constFadeInWithDelay(0.575)}>
+              <motion.li className="relative" {...constFadeInWithDelay}>
                 Jalan Kayu
               </motion.li>
-              <motion.li className="relative" {...constFadeInWithDelay(0.6)}>
+              <motion.li className="relative" {...constFadeInWithDelay}>
                 Kembangan
               </motion.li>
-              <motion.li className="relative" {...constFadeInWithDelay(0.625)}>
+              <motion.li className="relative" {...constFadeInWithDelay}>
                 Simpang Bedok
               </motion.li>
-              <motion.li className="relative" {...constFadeInWithDelay(0.65)}>
+              <motion.li className="relative" {...constFadeInWithDelay}>
                 Changi
               </motion.li>
             </ul>
@@ -172,40 +171,40 @@ export const ConstellationsIntro = () => {
 
             <h5 className="block md:hidden section-heading">Stars</h5>
             <ul className="text-base md:text-4xl xl:text-5xl leading-5 md:leading-tighter md:tracking-tight">
-              <motion.li className="relative" {...constFadeInWithDelay(0.125)}>
+              <motion.li className="relative" {...constFadeInWithDelay}>
                 Zul&apos;s Traditional Dry Chilli
               </motion.li>
-              <motion.li className="relative" {...constFadeInWithDelay(0.15)}>
+              <motion.li className="relative" {...constFadeInWithDelay}>
                 Seng Hong Coffeeshop
               </motion.li>
-              <motion.li className="relative" {...constFadeInWithDelay(0.175)}>
+              <motion.li className="relative" {...constFadeInWithDelay}>
                 Makko Teck Neo{" "}
               </motion.li>
-              <motion.li className="relative" {...constFadeInWithDelay(0.2)}>
+              <motion.li className="relative" {...constFadeInWithDelay}>
                 Lim Joo Hin Eating House
               </motion.li>
-              <motion.li className="relative" {...constFadeInWithDelay(0.225)}>
+              <motion.li className="relative" {...constFadeInWithDelay}>
                 Outram Park Ya Hua Rou Gu Cha
               </motion.li>
-              <motion.li className="relative" {...constFadeInWithDelay(0.25)}>
+              <motion.li className="relative" {...constFadeInWithDelay}>
                 Lau Ah Tee Bak Kut Teh
               </motion.li>
-              <motion.li className="relative" {...constFadeInWithDelay(0.275)}>
+              <motion.li className="relative" {...constFadeInWithDelay}>
                 River South Prawn Noodles
               </motion.li>
-              <motion.li className="relative" {...constFadeInWithDelay(0.3)}>
+              <motion.li className="relative" {...constFadeInWithDelay}>
                 928 Yishun Laksa
               </motion.li>
-              <motion.li className="relative" {...constFadeInWithDelay(0.325)}>
+              <motion.li className="relative" {...constFadeInWithDelay}>
                 Lau Wang Claypot Delights
               </motion.li>
-              <motion.li className="relative" {...constFadeInWithDelay(0.35)}>
+              <motion.li className="relative" {...constFadeInWithDelay}>
                 Ponggol Nasi Lemak{" "}
               </motion.li>
-              <motion.li className="relative" {...constFadeInWithDelay(0.375)}>
+              <motion.li className="relative" {...constFadeInWithDelay}>
                 Madeleine&apos;s Original Egg Tart
               </motion.li>
-              <motion.li className="relative" {...constFadeInWithDelay(0.4)}>
+              <motion.li className="relative" {...constFadeInWithDelay}>
                 Fu Lin Tofu Yuen
               </motion.li>
             </ul>
