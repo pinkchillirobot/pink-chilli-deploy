@@ -23,11 +23,11 @@ export const AboutBook = () => {
     >
       <div className="grid grid-cols-1 md:grid-cols-[1fr_1px_2fr] gap-4">
         <div className="flex flex-col items-start justify-between">
-          <div className="[&>p]:indent-[2em] [&_p:nth-of-type(1)]:indent-0 py-2">
+          <div className="py-2">
             <motion.h2 {...fadeInProps} className="section-heading">
               About the Book
             </motion.h2>
-            <motion.p {...fadeInProps}>
+            <motion.p {...fadeInProps} className="my-2">
               Neither a tourist guide nor a work of historical records, “Pink
               Chilli in a Bowl” is a personal archive of forgotten places and
               time-honoured buildings that may someday be wiped out—some of
@@ -37,22 +37,22 @@ export const AboutBook = () => {
               reconstruct their mental map of the island nation in ways that
               inspire them.
             </motion.p>
-            <motion.p {...fadeInProps}>
+            <motion.p {...fadeInProps} className="my-2">
               Each Constellation is composed of three different types of
               entries: restaurant, food, and landmark, which can all be found
               within a twenty-to forty-minute promenade.
             </motion.p>
-            <motion.p {...fadeInProps}>
+            <motion.p {...fadeInProps} className="my-2">
               The Stars are singular entries in a specific location or
               characteristic that is worth highlighting.
             </motion.p>
-            <motion.p {...fadeInProps}>
+            <motion.p {...fadeInProps} className="my-2">
               The Essays are contributions made by food-enthusiastic writers
               about Singaporean eateries which contextualise the current survey
               into the specifics of the social, cultural, and political
               environment in this island-nation.
             </motion.p>
-            <motion.p {...fadeInProps}>
+            <motion.p {...fadeInProps} className="my-2">
               The Archives are curated selections of photographs which showcase
               the generic patterns of diversity in Singapore.
             </motion.p>

@@ -20,7 +20,7 @@ export const ConstellationsIntro = () => {
       className="relative w-full border-chilli-grey border-x px-4 scroll-my-16"
     >
       <div className="grid grid-cols-[1fr_1px_1fr] md:grid-cols-[1fr_1px_3fr] lg:grid-cols-[1fr_1px_2fr] gap-4">
-        <div className="[&>p]:indent-[2em] [&_p:nth-of-type(1)]:indent-0 sticky top-4 md:top-16 self-start flex justify-between flex-col items-start md:min-h-[calc(100vh-6rem)]">
+        <div className="sticky top-4 md:top-16 self-start flex justify-between flex-col items-start md:min-h-[calc(100vh-6rem)]">
           <div className="py-2">
             <motion.h2
               className="section-heading"
@@ -62,7 +62,7 @@ export const ConstellationsIntro = () => {
         <div className="grid gap-4 grid-cols-1 md:grid-cols-2 pt-0 md:pt-[8px]">
           <div className="py-2">
             <h5 className="block md:hidden section-heading">Constellations</h5>
-            <ul className="text-base md:text-4xl xl:text-5xl leading-5 md:tracking-tight leading-[1.1] [&>li]:pl-16 [&>li]:-indent-16">
+            <ul className="text-base md:text-4xl xl:text-5xl leading-5 md:tracking-tight leading-[1.1]">
               <li className="inline-block !indent-0 !pl-0 relative">
                 <a
                   href="#"
@@ -77,7 +77,7 @@ export const ConstellationsIntro = () => {
                 >
                   Yuhua
                 </a>
-                <span className="text-[10px] lg:text-xs text-chilli-grey font-mono tracking-none  top-[50%] translate-y-[-55%] left-[calc(100%+1em)] w-24 absolute md:leading-[1.1] lg:leading-[1.1] uppercase indent-0 pl-0">
+                <span className="text-[10px] lg:text-xs text-chilli-grey font-mono tracking-none top-[50%] translate-y-[-55%] left-[calc(100%+1em)] w-24 absolute md:leading-[1.1] lg:leading-[1.1] uppercase indent-0 pl-0">
                   <span className="touch:hidden inline">
                     Click to view the promenade
                   </span>
@@ -171,7 +171,7 @@ export const ConstellationsIntro = () => {
             <div className="block md:hidden border-t border-chilli-grey mb-8" />
 
             <h5 className="block md:hidden section-heading">Stars</h5>
-            <ul className="text-base md:text-4xl xl:text-5xl leading-5 md:leading-tighter md:tracking-tight  [&>li]:pl-8 [&>li]:-indent-8 md:[&>li]:pl-16 md:[&>li]:-indent-16">
+            <ul className="text-base md:text-4xl xl:text-5xl leading-5 md:leading-tighter md:tracking-tight">
               <motion.li className="relative" {...constFadeInWithDelay(0.125)}>
                 Zul&apos;s Traditional Dry Chilli
               </motion.li>

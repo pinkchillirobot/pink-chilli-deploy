@@ -62,25 +62,15 @@ body {
   }
 
   > div {
-    @apply bg-white duration-700;
+    @apply bg-white duration-700 z-[1];
     transition: none;
 
-    > img {
-      @apply opacity-30 transition-opacity cursor-pointer max-h-[100vh];
-
-      &:hover {
-        @apply opacity-60;
-      }
-    }
-
-    &.open {
-      @apply bg-white/50;
-
+    > div {
       > img {
-        @apply object-contain;
+        @apply opacity-30 transition-opacity cursor-pointer max-h-[100vh] object-cover;
 
         &:hover {
-          @apply opacity-100;
+          @apply opacity-60;
         }
       }
     }
@@ -89,7 +79,7 @@ body {
 
 @media (orientation: portrait) {
   #landing-module-base {
-    aspect-ratio: 1 / 1.7;
+    aspect-ratio: 1 / 1.75;
 
     span {
       @apply text-[29vw];
@@ -109,6 +99,26 @@ body {
 
     span.type-4 {
       @apply top-[85%] right-0 left-[unset];
+    }
+
+    div.image-1 {
+      @apply left-0 right-[unset] top-[68%] w-[25vw] h-[25vw];
+    }
+
+    div.image-2 {
+      @apply left-0 top-[34%] w-[35vw] aspect-[1.66] border border-chilli-grey;
+    }
+
+    div.image-3 {
+      @apply left-[unset] right-0 top-0 w-[26vw] aspect-[7/9];
+    }
+
+    div.image-4 {
+      @apply left-[unset] right-0 top-[34%] w-[35vw] aspect-[7/9];
+    }
+
+    div.image-5 {
+      @apply left-[unset] right-0 top-[68%] w-[50vw] aspect-[1.59] border border-chilli-grey;
     }
   }
 }
@@ -136,17 +146,45 @@ body {
     span.type-4 {
       @apply top-[50%] left-[30vw] right-[unset];
     }
+
+    div.image-1 {
+      @apply left-[unset] right-0 top-0 w-[25vw] h-[25vw];
+    }
+
+    div.image-2 {
+      @apply left-0 top-[25%] w-[32vw] aspect-[1.66] border border-chilli-gray;
+    }
+
+    div.image-3 {
+      @apply left-0 right-[unset] top-[75%] w-[12vw] aspect-[7/9];
+    }
+
+    div.image-4 {
+      @apply left-[calc(12vw+1rem)] right-[unset] top-[75%] w-[12vw] aspect-[7/9];
+    }
+
+    div.image-5 {
+      @apply left-[unset] right-0 top-[75%] w-[30vw] aspect-[1.59];
+    }
   }
 }
 
-/*
-					"[&>span]:tracking-tighter [&>span]:leading-none [&>span]:z-[2] [&>span]:pointer-events-none [&>*]:block [&>*]:absolute [&>div]:bg-white [&>div>img]:opacity-30 [&>div>img:hover]:opacity-60 [&>div>img]:transition-opacity [&>div>img]:cursor-pointer [&>div.open>img]:opacity-100 [&>div.open>img:hover]:opacity-100 [&>div]:transition-[left] [&>div]:transition-[right] [&>div]:transition-[width] [&>div]:duration-700 [&>div>img]:max-h-[100vh] [&>div.open>img]:object-contain [&>div.open]:bg-white/50 w-full aspect-[1/2] sm:aspect-[1/2] md:aspect-[2/3]"
+#landing-module-base {
+  & > div {
+    &.open {
+      @apply bg-white/50 top-0 left-0 right-0 w-full h-[100vh] z-[20] border-0 aspect-auto fixed p-8;
 
+      div {
+        @apply w-full h-full relative;
 
-  sm: '640px',
-  md: '768px',
-  lg: '1024px',
-  xl: '1280px',
-  '2xl': '1536px'
+        > img {
+          @apply object-contain opacity-100;
 
-*/
+          &:hover {
+            @apply opacity-100;
+          }
+        }
+      }
+    }
+  }
+}
