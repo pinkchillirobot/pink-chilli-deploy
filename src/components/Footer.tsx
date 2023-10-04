@@ -31,9 +31,6 @@ export const Footer = () => {
             >
               G8A
             </a>
-            <a href="#" target="_blank" rel="noreferrer">
-              Stockists
-            </a>
           </div>
 
           <div className="vertical-border border-l border-chilli-grey md:hidden block relative">

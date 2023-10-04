@@ -172,7 +172,7 @@ export const ConstellationsIntro = () => {
             <h5 className="block md:hidden section-heading">Stars</h5>
             <ul className="text-base md:text-4xl xl:text-5xl leading-5 md:leading-tighter md:tracking-tight">
               <motion.li className="relative" {...constFadeInWithDelay}>
-                Zul&apos;s Traditional Dry Chilli
+                Zul&rsquo;s Traditional Dry Chilli
               </motion.li>
               <motion.li className="relative" {...constFadeInWithDelay}>
                 Seng Hong Coffeeshop

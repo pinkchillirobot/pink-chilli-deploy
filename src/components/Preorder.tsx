@@ -61,7 +61,7 @@ export const Preorder = () => {
               <br />
               478 pages
               <br />
-              230mmW x 288mmH x 30mm spine width
+              230mmW &times; 288mmH &times; 30mm spine width
               <br />
               Weight: 1.5kg
             </motion.p>

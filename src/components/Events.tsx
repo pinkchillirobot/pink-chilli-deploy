@@ -93,10 +93,6 @@ export const Events = () => {
         <div className="flex flex-col items-start justify-between py-2">
           <div>
             <h2 className="section-heading">Upcoming Events</h2>
-            <p className="hidden md:block mb-8">
-              Get to know the authors behind the book! From in-person bookstore
-              events to virtual conversations, exciting events await.
-            </p>
           </div>
           {isLoading || data === undefined ? (
             <div>Loading</div>

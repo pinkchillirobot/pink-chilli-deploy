@@ -87,7 +87,7 @@ export const MenuButton = () => {
           &nbsp;
         </div>
         <div
-          className={`fixed top-0 right-0 w-full h-full overflow-hidden transition-all duration-700`}
+          className={`fixed top-0 right-0 w-full h-full overflow-hidden transition-all duration-1000`}
           style={{ zIndex: open ? 30 : 0, left: open ? 0 : "100%" }}
         >
           <div className={`absolute w-full h-full bg-chilli-pink top-0`}>
