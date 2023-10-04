@@ -4,16 +4,15 @@ import { useState } from "react";
 import btnClose from "../../public/btn-close.svg";
 import { motion } from "framer-motion";
 
-const fadeInWithDelay = (n: number) => ({
+const fadeInWithDelay = {
   initial: { opacity: 0, top: "1rem" },
   whileInView: { opacity: 1, top: 0 },
   exit: { opacity: 1, top: 0 },
   transition: {
-    delay: n,
     type: "spring",
     duration: 1.85,
   },
-});
+};
 
 const contributorsData = [
   {
@@ -198,7 +197,7 @@ export const Contributors = () => {
               {contributorsData.map((c, n) => (
                 <motion.li
                   className="mb-1"
-                  {...fadeInWithDelay(n * 0.15)}
+                  {...fadeInWithDelay}
                   key={c.name}
                   onClick={() => {
                     setActiveIndex(n);
