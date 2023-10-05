@@ -158,31 +158,35 @@ export const Events = () => {
           <AnimatePresence>
             {data !== undefined && (
               <div className="width-full aspect-[4/3] lg:aspect-[9/5] overflow-hidden relative">
-                <button
-                  onClick={() => {
-                    setSlide((a) => (a < 1 ? data.length - 1 : a - 1));
-                  }}
-                  className="absolute top-[50%] left-4 z-[9] translate-y-[-50%]"
-                >
-                  <Image
-                    src={btnSlideArrow}
-                    alt="previous event"
-                    className="scale-x-[-1] w-8 h-8"
-                  />
-                </button>
+                {data.length > 1 && (
+                  <button
+                    onClick={() => {
+                      setSlide((a) => (a < 1 ? data.length - 1 : a - 1));
+                    }}
+                    className="absolute top-[50%] left-4 z-[9] translate-y-[-50%]"
+                  >
+                    <Image
+                      src={btnSlideArrow}
+                      alt="previous event"
+                      className="scale-x-[-1] w-8 h-8"
+                    />
+                  </button>
+                )}
 
-                <button
-                  onClick={() => {
-                    setSlide((a) => (a >= data.length - 1 ? 0 : a + 1));
-                  }}
-                  className="absolute top-[50%] right-4 z-[8] translate-y-[-50%]"
-                >
-                  <Image
-                    src={btnSlideArrow}
-                    alt="next event"
-                    className="w-8 h-8"
-                  />
-                </button>
+                {data.length > 1 && (
+                  <button
+                    onClick={() => {
+                      setSlide((a) => (a >= data.length - 1 ? 0 : a + 1));
+                    }}
+                    className="absolute top-[50%] right-4 z-[8] translate-y-[-50%]"
+                  >
+                    <Image
+                      src={btnSlideArrow}
+                      alt="next event"
+                      className="w-8 h-8"
+                    />
+                  </button>
+                )}
                 <motion.img
                   key={slide}
                   src={urlFor(data[slide].thumbnail)
@@ -229,6 +233,7 @@ export const Events = () => {
           )}
           <div className="flex justify-center gap-2 md:hidden py-2">
             {data !== undefined &&
+              data.length > 1 &&
               new Array(data.length)
                 .fill(0)
                 .map((_d, n) => (

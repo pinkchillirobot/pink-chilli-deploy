@@ -102,11 +102,11 @@ body {
     }
 
     div.image-1 {
-      @apply left-0 right-[unset] top-[68%] w-[25vw] h-[25vw];
+      @apply left-0 right-[unset] top-[68%] w-[31.2vw] aspect-[1];
     }
 
     div.image-2 {
-      @apply left-0 top-[34%] w-[35vw] aspect-[1.66] border border-chilli-grey;
+      @apply left-0 top-[34%] w-[50vw] aspect-[1.66];
     }
 
     div.image-3 {
@@ -114,11 +114,11 @@ body {
     }
 
     div.image-4 {
-      @apply left-[unset] right-0 top-[34%] w-[35vw] aspect-[7/9];
+      @apply left-[unset] right-0 top-[34%] w-[32vw] aspect-[7/9];
     }
 
     div.image-5 {
-      @apply left-[unset] right-0 top-[68%] w-[50vw] aspect-[1.59] border border-chilli-grey;
+      @apply left-[unset] right-0 top-[68%] w-[50vw] aspect-[1.59];
     }
   }
 }
@@ -152,7 +152,7 @@ body {
     }
 
     div.image-2 {
-      @apply left-0 top-[25%] w-[32vw] aspect-[1.66] border border-chilli-gray;
+      @apply left-0 top-[25%] w-[32vw] aspect-[1.66];
     }
 
     div.image-3 {
@@ -178,7 +178,7 @@ body {
         @apply w-full h-full relative;
 
         > img {
-          @apply object-contain opacity-100;
+          @apply object-contain opacity-100 duration-1000;
 
           &:hover {
             @apply opacity-100;

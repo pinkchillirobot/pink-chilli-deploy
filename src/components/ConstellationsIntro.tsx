@@ -3,9 +3,9 @@
 import { motion } from "framer-motion";
 
 const constFadeInWithDelay = {
-  initial: { opacity: 0, top: "1rem" },
-  whileInView: { opacity: 1, top: 0 },
-  exit: { opacity: 1, top: 0 },
+  initial: { opacity: 0 },
+  whileInView: { opacity: 1 },
+  exit: { opacity: 0 },
   transition: {
     type: "spring",
     duration: 1.85,
@@ -65,7 +65,7 @@ export const ConstellationsIntro = () => {
               <li className="inline-block !indent-0 !pl-0 relative">
                 <a
                   href="#"
-                  className="indent-0 pl-0 hover:text-chilli-pink"
+                  className="indent-8 -pl-8 hover:text-chilli-pink"
                   onClick={(e) => {
                     e.preventDefault();
                     const elem = document.getElementById("map");
