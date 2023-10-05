@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import I1 from "../../public/landing/1.jpg";
@@ -18,6 +18,15 @@ const fadeInProps = (delay?: number) => ({
 
 export const LandingModule = () => {
   const [open, setOpen] = useState<null | 1 | 2 | 3 | 4 | 5>(null);
+  const [lastOpen, setLastOpen] = useState<null | 1 | 2 | 3 | 4 | 5>(null);
+
+  useEffect(() => {
+    if (open === undefined) {
+      return;
+    }
+    setLastOpen(() => open);
+  }, [open]);
+
   return (
     <div
       id="landing-module"
@@ -42,7 +51,7 @@ export const LandingModule = () => {
           onClick={() => {
             setOpen((n) => (n === 1 ? null : 1));
           }}
-          className={`image-1${open === 1 ? " open" : ""}`}
+          className={`image-1`}
         >
           <div>
             <Image src={I1} alt="" fill={true} />
@@ -53,7 +62,7 @@ export const LandingModule = () => {
           onClick={() => {
             setOpen((n) => (n === 2 ? null : 2));
           }}
-          className={`image-2${open === 2 ? " open" : ""}`}
+          className={`image-2`}
         >
           <div>
             <Image src={I2} alt="" fill={true} />
@@ -64,7 +73,7 @@ export const LandingModule = () => {
           onClick={() => {
             setOpen((n) => (n === 3 ? null : 3));
           }}
-          className={`image-3${open === 3 ? " open" : ""}`}
+          className={`image-3`}
         >
           <div>
             <Image src={I3} alt="" fill={true} />
@@ -75,7 +84,7 @@ export const LandingModule = () => {
           onClick={() => {
             setOpen((n) => (n === 4 ? null : 4));
           }}
-          className={`image-4${open === 4 ? " open" : ""}`}
+          className={`image-4`}
         >
           <div>
             <Image src={I4} alt="" fill={true} />
@@ -86,10 +95,37 @@ export const LandingModule = () => {
           onClick={() => {
             setOpen((n) => (n === 5 ? null : 5));
           }}
-          className={`image-5${open === 5 ? " open" : ""}`}
+          className={`image-5`}
         >
           <div>
             <Image src={I5} alt="" fill={true} />
+          </div>
+        </motion.div>
+
+        <motion.div
+          onClick={() => {
+            setOpen(null);
+          }}
+          className={`image-zoom ${
+            open !== null
+              ? `opacity-100 pointer-events-all`
+              : `opacity-0 pointer-events-none`
+          }`}
+        >
+          <div>
+            {lastOpen === 1 ? (
+              <Image src={I1} alt="" fill={true} />
+            ) : open === 2 ? (
+              <Image src={I2} alt="" fill={true} />
+            ) : open === 3 ? (
+              <Image src={I3} alt="" fill={true} />
+            ) : open === 4 ? (
+              <Image src={I4} alt="" fill={true} />
+            ) : open === 5 ? (
+              <Image src={I5} alt="" fill={true} />
+            ) : (
+              <></>
+            )}
           </div>
         </motion.div>
       </div>

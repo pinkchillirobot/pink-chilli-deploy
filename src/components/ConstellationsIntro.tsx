@@ -61,7 +61,7 @@ export const ConstellationsIntro = () => {
         <div className="grid gap-4 grid-cols-1 md:grid-cols-2 pt-0 md:pt-[8px]">
           <div className="py-2">
             <h5 className="block md:hidden section-heading">Constellations</h5>
-            <ul className="text-base md:text-4xl xl:text-5xl leading-5 md:tracking-tight leading-[1.1]">
+            <ul className="text-base md:text-4xl xl:text-5xl leading-5 md:tracking-tight leading-[1.1] [&_li]:-indent-4 [&_li]:pl-4 md:[&_li]:-indent-8 md:[&_li]:pl-8">
               <li className="inline-block !indent-0 !pl-0 relative">
                 <a
                   href="#"
@@ -170,7 +170,7 @@ export const ConstellationsIntro = () => {
             <div className="block md:hidden border-t border-chilli-grey mb-8" />
 
             <h5 className="block md:hidden section-heading">Stars</h5>
-            <ul className="text-base md:text-4xl xl:text-5xl leading-5 md:leading-tighter md:tracking-tight">
+            <ul className="text-base md:text-4xl xl:text-5xl leading-5 md:leading-tighter md:tracking-tight [&_li]:-indent-4 [&_li]:pl-4 md:[&_li]:-indent-8 md:[&_li]:pl-8">
               <motion.li className="relative" {...constFadeInWithDelay}>
                 Zul&rsquo;s Traditional Dry Chilli
               </motion.li>

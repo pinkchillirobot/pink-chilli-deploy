@@ -193,7 +193,7 @@ export const Contributors = () => {
         </div>
         <div className="grid gap-4 md:grid-cols-2 pt-8 md:pt-[16px]">
           <div className="flex flex-col align-start justify-between py-2">
-            <ul className="text-base md:text-4xl xl:text-5xl md:tracking-tight leading-[1.1] [&>li]:pl-0 [&>li]:-indent-0 md:[&>li]:pl-16 md:[&>li]:-indent-16">
+            <ul className="text-base md:text-4xl xl:text-5xl md:tracking-tight leading-[1.1] [&>li]:pl-0 [&>li]:-indent-0 md:[&>li]:pl-8 md:[&>li]:-indent-8">
               {contributorsData.map((c, n) => (
                 <motion.li
                   className="mb-1"

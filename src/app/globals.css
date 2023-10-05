@@ -171,14 +171,14 @@ body {
 
 #landing-module-base {
   & > div {
-    &.open {
-      @apply bg-white/50 top-0 left-0 right-0 w-full h-[100vh] z-[20] border-0 aspect-auto fixed p-8;
+    &.image-zoom {
+      @apply bg-white/50 top-0 left-0 right-0 w-full h-[100vh] z-[20] border-0 aspect-auto fixed p-8 transition-opacity duration-1000;
 
       div {
         @apply w-full h-full relative;
 
         > img {
-          @apply object-contain opacity-100 duration-1000;
+          @apply object-contain opacity-100;
 
           &:hover {
             @apply opacity-100;
