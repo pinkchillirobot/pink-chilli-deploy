@@ -2,7 +2,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import btnClose from "../../public/btn-close.svg";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 
 const fadeInWithDelay = {
   initial: { opacity: 0 },
@@ -229,27 +229,39 @@ export const Contributors = () => {
             </p>
           </div>
           {activeIndex !== undefined && (
-            <div className="hidden md:block">
-              <div className="font-mono text-xs mb-4">
-                {contributorsData[activeIndex]?.name}
-                <br />
-                {contributorsData[activeIndex]?.title}
-                {!!contributorsData[activeIndex]?.url && (
-                  <>
+            <div className="hidden md:block relative">
+              {contributorsData.map((contributor, n) => (
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: n === activeIndex ? 1 : 0 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ type: "spring", duration: 1.85 }}
+                  key={contributor.name}
+                  className="absolute top-0 left-0 w-full"
+                >
+                  <div className="font-mono text-xs mb-4">
+                    {contributor.name}
                     <br />
-                    <a
-                      href={contributorsData[activeIndex]?.url}
-                      className="underline"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      {contributorsData[activeIndex]?.url}
-                    </a>
-                  </>
-                )}{" "}
-              </div>
-
-              <p className="">{contributorsData[activeIndex]?.description}</p>
+                    {contributor.title}
+                    {!!contributor?.url && (
+                      <>
+                        <br />
+                        <a
+                          href={contributor.url}
+                          className="underline"
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          {contributor.url}
+                        </a>
+                      </>
+                    )}
+                  </div>
+                  <p className="">
+                    {contributorsData[activeIndex]?.description}
+                  </p>
+                </motion.div>
+              ))}
             </div>
           )}
         </div>

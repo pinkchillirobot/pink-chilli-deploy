@@ -47,7 +47,7 @@ export const LandingModule = () => {
         </motion.span>
 
         <motion.div
-          {...fadeInProps(0.25)}
+          {...fadeInProps(0.15)}
           onClick={() => {
             setOpen((n) => (n === 1 ? null : 1));
           }}
@@ -58,7 +58,7 @@ export const LandingModule = () => {
           </div>
         </motion.div>
         <motion.div
-          {...fadeInProps(0.35)}
+          {...fadeInProps(0.2)}
           onClick={() => {
             setOpen((n) => (n === 2 ? null : 2));
           }}
@@ -69,7 +69,7 @@ export const LandingModule = () => {
           </div>
         </motion.div>
         <motion.div
-          {...fadeInProps(0.45)}
+          {...fadeInProps(0.25)}
           onClick={() => {
             setOpen((n) => (n === 3 ? null : 3));
           }}
@@ -80,7 +80,7 @@ export const LandingModule = () => {
           </div>
         </motion.div>
         <motion.div
-          {...fadeInProps(0.55)}
+          {...fadeInProps(0.3)}
           onClick={() => {
             setOpen((n) => (n === 4 ? null : 4));
           }}
@@ -91,7 +91,7 @@ export const LandingModule = () => {
           </div>
         </motion.div>
         <motion.div
-          {...fadeInProps(0.65)}
+          {...fadeInProps(0.35)}
           onClick={() => {
             setOpen((n) => (n === 5 ? null : 5));
           }}
