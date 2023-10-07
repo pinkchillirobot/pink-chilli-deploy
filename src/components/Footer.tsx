@@ -18,7 +18,7 @@ export const Footer = () => {
         <div className="[&_a]:uppercase [&_a]:underline grid grid-cols-[1fr_1px_2fr] md:block gap-4 md:gap-0 py-2">
           <div className="flex justify-start gap-0 flex-col md:flex-row md:gap-4 leading-relaxed">
             <a
-              href="https://www.instagram.com/tb80_space"
+              href="https://www.instagram.com/pinkchilliinabowl"
               target="_blank"
               rel="noreferrer"
             >
