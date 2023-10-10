@@ -19,7 +19,7 @@ export const Preorder = () => {
               exit={{ opacity: 0 }}
               transition={{ type: "spring", duration: 1.85 }}
             >
-              Pre-order our Book
+              Purchase The Book
             </motion.h2>
             <motion.p
               className="mb-4 order-2 md:order-1 w-full"
@@ -28,9 +28,18 @@ export const Preorder = () => {
               exit={{ opacity: 0 }}
               transition={{ type: "spring", duration: 1.85 }}
             >
-              Pre-order &ldquo;Pink Chilli in a Bowl&rdquo; online for S$150
-              (excluding GST). Orders will be fulfilled post-launch on 9 October
-              2023.
+              Pink Chilli in a Bowl is available online for S$150 (excluding
+              GST).
+            </motion.p>
+            <motion.p
+              className="mb-4 order-2 md:order-1 w-full"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ type: "spring", duration: 1.85 }}
+            >
+              Also available at the following stockists: Wardah Books, Basheer
+              Graphic Books.
             </motion.p>
             <motion.p
               className="order-1 md:order-2 w-full mb-4 md:mb-0"
@@ -45,7 +54,7 @@ export const Preorder = () => {
                 rel="noreferrer"
                 className="text-base block text-center uppercase md:normal-case md:inline-block px-4 py-2 md:py-1 border border-black rounded-full hover:bg-chilli-pink transition-500 transition-all"
               >
-                Pre-order the book
+                Purchase the Book
               </a>
             </motion.p>
           </div>
