@@ -28,7 +28,7 @@ export const Preorder = () => {
               exit={{ opacity: 0 }}
               transition={{ type: "spring", duration: 1.85 }}
             >
-              Pink Chilli in a Bowl is available online for S$150 (excluding
+              Pink Chilli in a Bowl is available online for S$150 (excluding
               GST).
             </motion.p>
             <motion.p
